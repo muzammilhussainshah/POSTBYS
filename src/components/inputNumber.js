@@ -1,6 +1,5 @@
 import FastImage from 'react-native-fast-image';
-import Ionicons from "react-native-vector-icons/Ionicons";
-import CountryCodePicker from './CountryCodePicker';
+import Ionicons from "react-native-vector-icons/Ionicons"; 
 import Colors from "../common/Colors";
 import React from "react";
 import {
@@ -11,13 +10,13 @@ import {
   View
 } from 'react-native';
 
-const PhoneNumber = ({imgPath,dialCode, CheckMark,width, placeholderTextColor, maxLength, passwordShow, placeHolder, _func }) => {
+const PhoneNumber = ({imgPath,dialCode, CheckMark , placeholderTextColor, maxLength, passwordShow, placeHolder, _func }) => {
   return (
     <>
      
       <View style={{ flex: CheckMark ? 6.5 : 8 }}>
         <TextInput
-          style={{ fontSize: 17,width={width}, paddingHorizontal: 15, }}
+          style={{ fontSize: 17  ,height:"100%" }}
           maxLength={maxLength}
           onChangeText={(text) => _func(text)}
           keyboardType="numeric"
