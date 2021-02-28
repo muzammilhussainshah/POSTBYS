@@ -16,14 +16,10 @@ import {
 } from 'react-native';
 const screenHeight = Dimensions.get('window').height - 24;
 const NewPassScreen = ({ }) => {
-    const [email, setEmail] = useState("")
     const [newPass, setNewPass] = useState("")
     const [newPasswordShow, setNewPasswordShow] = useState(true)
-
     const [confirmNewPass, setConfirmNewPass] = useState("")
     const [confirmNewPasswordShow, setConfirmNewPasswordShow] = useState(true)
-
-
     return (
         <ScrollView   >
             <View
@@ -92,7 +88,6 @@ const NewPassScreen = ({ }) => {
                                 }
                             </TouchableOpacity>
                         </View>
-
                         <LoginBtn
                             name={"Send"}
                             backgroundColor={Colors.black}

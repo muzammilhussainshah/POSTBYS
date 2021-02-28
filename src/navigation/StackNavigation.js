@@ -6,6 +6,11 @@ import ForgotScreen from "../screens/ForgotScreen/index";
 import ChangePassword from "../screens/ChangePassword/index";
 import NewPassScreen from "../screens/NewPassScreen/index";
 import VarificationScreen from "../screens/VarificationScreen/index";
+import Home from "../screens/AppScreens/Home/index";
+import BagScreen from "../screens/AppScreens/BagScreen/index";
+import Plus from "../screens/AppScreens/Plus/index";
+import ChatScreen from "../screens/AppScreens/ChatScreen/index";
+import SettingScreen from "../screens/AppScreens/SettingScreen/index";
 export default Route = () => {
   return (
     <Router
@@ -13,6 +18,11 @@ export default Route = () => {
       titleStyle={{ color: "white" }}
       tintColor="white">
       <Scene>
+        <Scene key='Home' component={Home} hideNavBar={true} />
+        <Scene key='SettingScreen' component={SettingScreen} hideNavBar={true} />
+        <Scene key='ChatScreen' component={ChatScreen} hideNavBar={true} />
+        <Scene key='Plus' component={Plus} hideNavBar={true} />
+        <Scene key='BagScreen' component={BagScreen} hideNavBar={true} />
         <Scene key='VarificationScreen' component={VarificationScreen} hideNavBar={true} />
         <Scene key='NewPassScreen' component={NewPassScreen} hideNavBar={true} />
 
