@@ -16,7 +16,6 @@ import {
   FlatList,
   StyleSheet,
 } from 'react-native';
-
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -33,28 +32,24 @@ const DATA = [
     title2: '& Textile Fair',
 
   },
-
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
     title: 'Hong Kong Jewelry',
     title2: '& Gem Fair',
 
   },
-
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
     title: 'Las Vegas Antique',
     title2: 'Jewelry & Watch Show',
 
   },
-
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
     title: 'International apparel',
     title2: '& Textile fair',
 
   },
-
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
     title: 'International apparel',
@@ -62,7 +57,6 @@ const DATA = [
 
   },
 ];
-
 const RowWiseData = ({ title, title2 }) => (
   <View style={styles.item}>
     <View style={{ flex: 1 }}></View>
@@ -74,8 +68,6 @@ const RowWiseData = ({ title, title2 }) => (
     </View>
   </View>
 );
-
-
 const ColumnWise = ({ title, title2 }) => (
   <View style={styles.item2}>
     <View style={{ flex: 1 }}></View>
@@ -92,13 +84,11 @@ const Home = () => {
   const [twoScreen, setTwoScreen] = useState(true)
   const [numColumns, setNumColumns] = useState(2)
   const [value, onChangeText] = useState(true)
-
   const renderItem = ({ item }) => (
     twoScreen ?
       <RowWiseData title={item.title} title2={item.title2} />
       :
       <ColumnWise title={item.title} title2={item.title2} />
-
   );
   return (
     <AppContainer route={"Home"}   >
@@ -170,14 +160,22 @@ const Home = () => {
             </TouchableOpacity>
           </View>
           <View style={{ flex: 7.2 }}>
-               <FlatList
+            {twoScreen == true ?
+              <FlatList
+                key={'#'}
+                numColumns={1}
+                data={DATA}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+              /> :
+              <FlatList
+                key={'_'}
                 numColumns={2}
                 data={DATA}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
-              />  
-
-
+              />
+            }
           </View>
         </View>
       </ScrollView>
@@ -217,33 +215,22 @@ const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   item: {
-    // backgroundColor: '#f9c2ff',
-    // padding: 20,
     height: 90,
     width: "100%",
-
     borderWidth: 1,
     borderRadius: 3,
     borderColor: Colors.slideClr,
     flexDirection: "row",
     marginBottom: 10
-    // marginVertical: 8,
-    // marginHorizontal: 16,
   },
   item2: {
-    // backgroundColor: '#f9c2ff',
-    // padding: 20,
     height: 170,
     width: "48%",
     borderWidth: 1,
     borderRadius: 3,
     borderColor: Colors.slideClr,
-    // flexDirection: "row",
     marginBottom: 10,
     marginRight: 10
-    // marginVertical: 8,
-    // marginHorizontal: 10,
   },
-
 });
 export default Home;
