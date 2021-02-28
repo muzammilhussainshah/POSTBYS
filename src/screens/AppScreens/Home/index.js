@@ -3,32 +3,107 @@ import FastImage from 'react-native-fast-image';
 import Colors from "../../../common/Colors"
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Entypo from 'react-native-vector-icons/Entypo';
 import Feather from 'react-native-vector-icons/Feather';
-import Input from "../../../components/input"
 import AppContainer from '../../../container/AppContainer';
 import {
   Text,
   Dimensions,
-  Switch,
-  SafeAreaView,
-  TouchableOpacity, TextInput,
-
+  TouchableOpacity,
+  TextInput,
   View,
-  ImageBackground,
   ScrollView,
+  FlatList,
   StyleSheet,
-  FlatList
 } from 'react-native';
-const windowHeight = Dimensions.get('window').height - 24;
 
+const DATA = [
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+    title: 'CES Tech',
+  },
+  {
+    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+    title: 'The National Sports',
+    title2: 'NSCC',
+  },
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: 'International apparel',
+    title2: '& Textile Fair',
+
+  },
+
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: 'Hong Kong Jewelry',
+    title2: '& Gem Fair',
+
+  },
+
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: 'Las Vegas Antique',
+    title2: 'Jewelry & Watch Show',
+
+  },
+
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: 'International apparel',
+    title2: '& Textile fair',
+
+  },
+
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: 'International apparel',
+    title2: '& Textile fair',
+
+  },
+];
+
+const RowWiseData = ({ title, title2 }) => (
+  <View style={styles.item}>
+    <View style={{ flex: 1 }}></View>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "flex-end" }}>
+      <Text style={{ fontSize: 15, marginRight: 15 }}>{title}</Text>
+      {title2 &&
+        <Text style={{ fontSize: 15, marginRight: 15 }}>{title2}</Text>
+      }
+    </View>
+  </View>
+);
+
+
+const ColumnWise = ({ title, title2 }) => (
+  <View style={styles.item2}>
+    <View style={{ flex: 1 }}></View>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text style={{ fontSize: 15, }}>{title}</Text>
+      {title2 &&
+        <Text style={{ fontSize: 15, }}>{title2}</Text>
+      }
+    </View>
+  </View>
+);
+const windowHeight = Dimensions.get('window').height - 24;
 const Home = () => {
   const [twoScreen, setTwoScreen] = useState(true)
+  const [numColumns, setNumColumns] = useState(2)
   const [value, onChangeText] = useState(true)
 
+  const renderItem = ({ item }) => (
+    twoScreen ?
+      <RowWiseData title={item.title} title2={item.title2} />
+      :
+      <ColumnWise title={item.title} title2={item.title2} />
+
+  );
   return (
     <AppContainer route={"Home"}   >
-      <ScrollView style={{ height: windowHeight / 1.25 }}>
-        <View style={{ height: windowHeight / 1, paddingHorizontal: 15 }}>
+      <ScrollView style={{ height: windowHeight / 1.21 }}  >
+        <View style={{ height: windowHeight / 1.1, paddingHorizontal: 15 }}>
           <View style={styles.header}>
             <View style={{ flex: 1.2, justifyContent: "center" }}>
               < FastImage
@@ -41,10 +116,12 @@ const Home = () => {
               <Text style={{ fontSize: 18 }}>POSTBYS</Text>
             </View>
             <View style={{ flex: 2.5, justifyContent: "center", alignItems: 'center' }}>
-              <View style={{ height: "50%", width: "90%", borderRadius: 20, backgroundColor: Colors.lightGray, flexDirection: "row", justifyContent: "space-evenly", alignItems: "center" }}>
+              <View style={styles.switchScreens}>
                 <TouchableOpacity
                   onPress={() => setTwoScreen(!twoScreen)}
-                  style={{ height: "70%", width: "40%", justifyContent: "center", alignItems: "center", borderRadius: 10, backgroundColor: twoScreen ? Colors.white : null }}>
+                  style={[styles.switchScreensView, {
+                    backgroundColor: twoScreen ? Colors.white : null
+                  }]}>
                   <FontAwesome5
                     name={"equals"}
                     size={18}
@@ -53,27 +130,24 @@ const Home = () => {
                 </TouchableOpacity>
                 <TouchableOpacity
                   onPress={() => setTwoScreen(!twoScreen)}
-
-                  style={{ height: "70%", width: "40%", justifyContent: "center", alignItems: "center", borderRadius: 10, backgroundColor: !twoScreen ? Colors.white : null }}>
-
+                  style={[styles.switchScreensView, {
+                    backgroundColor: !twoScreen ? Colors.white : null
+                  }]}>
                   <AntDesign
                     name={"appstore1"}
-                    size={18}
+                    size={16}
                     style={{ color: Colors.slideClr }}
-
                   />
                 </TouchableOpacity>
               </View>
             </View>
           </View>
-          <View style={{ flex: 0.8, backgroundColor: Colors.lightGray, flexDirection: "row" }}>
+          <View style={styles.searchBarView}>
             <View style={{ flex: 1, justifyContent: "center", alignItems: "flex-end" }}>
-
               <Feather
                 name={"search"}
                 size={25}
                 style={{ color: Colors.slideClr }}
-
               />
             </View>
             <View style={{ flex: 9, justifyContent: "center" }}>
@@ -85,14 +159,91 @@ const Home = () => {
               />
             </View>
           </View>
-          <View style={{ flex: 1.2, backgroundColor: 'green' }}></View>
-          <View style={{ flex: 7, backgroundColor: 'pink' }}></View>
+          <View style={styles.tradeshows}>
+            <Text style={{ fontSize: 20 }}>Tradeshows</Text>
+            <TouchableOpacity>
+              <Entypo
+                name={"flow-parallel"}
+                size={25}
+                style={{ color: Colors.slideClr }}
+              />
+            </TouchableOpacity>
+          </View>
+          <View style={{ flex: 7.2 }}>
+               <FlatList
+                numColumns={2}
+                data={DATA}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+              />  
+
+
+          </View>
         </View>
       </ScrollView>
     </AppContainer >
   )
 };
 const styles = StyleSheet.create({
-  header: { flex: 1, flexDirection: "row" }
+  header: {
+    flex: 1,
+    flexDirection: "row"
+  },
+  switchScreens: {
+    height: "50%",
+    width: "90%",
+    borderRadius: 20,
+    backgroundColor: Colors.lightGray,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center"
+  },
+  switchScreensView: {
+    height: "70%",
+    width: "40%",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 10,
+  },
+  searchBarView: {
+    flex: 0.8,
+    backgroundColor: Colors.lightGray,
+    flexDirection: "row"
+  },
+  tradeshows: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between"
+  },
+  item: {
+    // backgroundColor: '#f9c2ff',
+    // padding: 20,
+    height: 90,
+    width: "100%",
+
+    borderWidth: 1,
+    borderRadius: 3,
+    borderColor: Colors.slideClr,
+    flexDirection: "row",
+    marginBottom: 10
+    // marginVertical: 8,
+    // marginHorizontal: 16,
+  },
+  item2: {
+    // backgroundColor: '#f9c2ff',
+    // padding: 20,
+    height: 170,
+    width: "48%",
+    borderWidth: 1,
+    borderRadius: 3,
+    borderColor: Colors.slideClr,
+    // flexDirection: "row",
+    marginBottom: 10,
+    marginRight: 10
+    // marginVertical: 8,
+    // marginHorizontal: 10,
+  },
+
 });
 export default Home;
