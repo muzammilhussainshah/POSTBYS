@@ -33,19 +33,19 @@ const DATA = [
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Pauline Fisher ',
+    title: 'Pauline Fisher',
     discription: 'Please message me if you carry calibrated blue shapphire 3mm round gemstones, need 20 carats, No more tha $200?ct quality',
 
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Sharlene Edwards ',
+    title: 'Sharlene Edwards',
     discription: 'Looking for butterfly shaped necklace jewelry design in 18kt rose gold. Please send me images, videos and price if you have. ',
 
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'International apparel',
+    title: 'International apparela',
     discription: '& Textile fair',
 
   },

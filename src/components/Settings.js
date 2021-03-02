@@ -6,14 +6,17 @@ import FastImage from 'react-native-fast-image';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Colors from '../common/Colors';
-import React from "react";
+import React, { useState } from "react";
 import {
     View,
     Text,
     TouchableOpacity,
-    StyleSheet
+    StyleSheet,
+    Switch
 } from 'react-native';
 const Setting = ({ title }) => {
+    const [isEnabled, setIsEnabled] = useState(true); 
+    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     return (
         <TouchableOpacity
             activeOpacity={0.8}
@@ -94,11 +97,22 @@ const Setting = ({ title }) => {
                         </Text>
                     </View>
                 }
-                <MaterialIcons
-                    name={"keyboard-arrow-right"}
-                    size={30}
-                    style={{ color: Colors.slideClr }}
-                />
+                {title == "Notifications" ?
+                    <View style={[styles.switchBtn, { backgroundColor: Colors.green }]} >
+                        <Switch
+                            trackColor={{ false: Colors.green, true: Colors.green }}
+                            thumbColor={isEnabled ? Colors.white : Colors.white}
+                            ios_backgroundColor="#3e3e3e"
+                            onValueChange={toggleSwitch}
+                            value={isEnabled}
+                        />
+                    </View> :
+                    <MaterialIcons
+                        name={"keyboard-arrow-right"}
+                        size={30}
+                        style={{ color: Colors.slideClr }}
+                    />
+                }
             </View>
         </TouchableOpacity>
     );
@@ -116,8 +130,15 @@ const styles = StyleSheet.create({
         flex: 5,
         alignItems: "center",
         flexDirection: "row",
-        justifyContent: "flex-end",
-        // backgroundColor: 'pink'
+        justifyContent: "flex-end", 
+    },
+    switchBtn: {
+        borderColor: Colors.shade,
+        height: 22,
+        width: 40,
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: 20
     }
 });
 export default Setting;

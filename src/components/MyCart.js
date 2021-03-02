@@ -1,4 +1,5 @@
 
+import FastImage from 'react-native-fast-image';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
@@ -11,7 +12,58 @@ const MyCart = ({ title, discription }) => {
     return (
         <View style={styles.item}>
             <View style={{ flex: 2.5, justifyContent: "center", alignItems: "flex-end" }}>
-                <View style={styles.CartImg}></View>
+                <View style={styles.CartImg}>
+
+                    {title == "Ronnie Pierce" &&
+                        < FastImage
+                            style={{ height: 100, width: 100, }}
+                            source={require("../assets/Bitmapb.png")}
+                            resizeMode={FastImage.resizeMode.contain}
+                        />
+                    }
+                    {title == "Leon Bennett" &&
+                        < FastImage
+                            style={{ height: 100, width: 100, }}
+                            source={require("../assets/Bitmapa.png")}
+                            resizeMode={FastImage.resizeMode.contain}
+                        />
+                    }
+                    {title == "Sonia Brown" &&
+                        < FastImage
+                            style={{ height: 100, width: 100, }}
+                            source={require("../assets/Bitmapc.png")}
+                            resizeMode={FastImage.resizeMode.contain}
+                        />
+                    }
+                    {title == "Pauline Fisher" &&
+                        < FastImage
+                            style={{ height: 100, width: 100, }}
+                            source={require("../assets/Bitmapd.png")}
+                            resizeMode={FastImage.resizeMode.contain}
+                        />
+                    }
+                    {title == "Sharlene Edwards" &&
+                        < FastImage
+                            style={{ height: 100, width: 100, }}
+                            source={require("../assets/Bitmag.png")}
+                            resizeMode={FastImage.resizeMode.contain}
+                        />
+                    }
+                    {title == "International apparela" &&
+                        < FastImage
+                            style={{ height: 100, width: 100, }}
+                            source={require("../assets/Bitmapb.png")}
+                            resizeMode={FastImage.resizeMode.contain}
+                        />
+                    }
+                    {title == "International apparel" &&
+                        < FastImage
+                            style={{ height: 100, width: 100, }}
+                            source={require("../assets/Bitmapc.png")}
+                            resizeMode={FastImage.resizeMode.contain}
+                        />
+                    }
+                </View>
             </View>
             <View style={{ flex: 6.3, paddingVertical: 5, justifyContent: "space-evenly" }}>
                 <Text >{title}
@@ -54,9 +106,10 @@ const styles = StyleSheet.create({
     CartImg: {
         height: "85%",
         width: '80%',
-        marginRight: 10,
-        borderWidth: 0.5,
-        borderRadius: 10
+        marginRight: 10, 
+        borderRadius: 10,
+        justifyContent:"center",
+        alignItems:"center"
     },
     MsgBtn: {
         height: 35,
