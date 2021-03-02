@@ -86,6 +86,7 @@ const LoginScreen = ({ }) => {
                         <View
                             style={{ flex: 6 }}>
                             <LoginBtn
+                            _func={()=> Actions.Home()}
                                 name={"Sign In"}
                                 backgroundColor={Colors.black}
                                 textColor={Colors.white}

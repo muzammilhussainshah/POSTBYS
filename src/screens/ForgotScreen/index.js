@@ -52,6 +52,7 @@ const ForgotScreen = ({ }) => {
                             />
                         </View>
                         <LoginBtn
+                            _func={()=> Actions.ChangePassword()}
                             name={"Send"}
                             backgroundColor={Colors.black}
                             textColor={Colors.white}

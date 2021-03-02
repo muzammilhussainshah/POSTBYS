@@ -38,7 +38,7 @@ const DATA = [
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
     Date: "12.11.2020",
     Message: "How much???",
-    Name: 'Aaron Rice ',
+    Name: 'Aaron Rice',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',

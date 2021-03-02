@@ -89,6 +89,7 @@ const NewPassScreen = ({ }) => {
                             </TouchableOpacity>
                         </View>
                         <LoginBtn
+                            _func={()=> Actions.Home()}
                             name={"Send"}
                             backgroundColor={Colors.black}
                             textColor={Colors.white}

@@ -88,6 +88,7 @@ const SignUpScreen = ({ }) => {
 
                         </View>
                         <LoginBtn
+                            _func={()=> Actions.ForgotScreen()}
                             name={"Sign Up"}
                             backgroundColor={Colors.black}
                             textColor={Colors.white}
