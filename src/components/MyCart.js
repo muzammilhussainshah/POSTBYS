@@ -43,7 +43,6 @@ const MyCart = ({ title, discription }) => {
     );
 }
 const styles = StyleSheet.create({
-
     item: {
         height: 120,
         flexDirection: "row",

@@ -18,6 +18,7 @@ export default Route = () => {
       titleStyle={{ color: "white" }}
       tintColor="white">
       <Scene>
+        <Scene key='LoginScreen' component={LoginScreen} hideNavBar={true} />
         <Scene key='Home' component={Home} hideNavBar={true} />
         <Scene key='SettingScreen' component={SettingScreen} hideNavBar={true} />
         <Scene key='ChatScreen' component={ChatScreen} hideNavBar={true} />
@@ -27,7 +28,6 @@ export default Route = () => {
         <Scene key='NewPassScreen' component={NewPassScreen} hideNavBar={true} />
 
         <Scene key='ChangePassword' component={ChangePassword} hideNavBar={true} />
-        <Scene key='LoginScreen' component={LoginScreen} hideNavBar={true} />
         <Scene key='ForgotScreen' component={ForgotScreen} hideNavBar={true} />
         <Scene key='SignUpScreen' component={SignUpScreen} hideNavBar={true} />
 

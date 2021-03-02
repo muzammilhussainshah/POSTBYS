@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import FastImage from 'react-native-fast-image';
 import Colors from "../../../common/Colors"
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import ColumnWise from "../../../components/ColumnWise";
+import RowWise from "../../../components/RowWise";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Feather from 'react-native-vector-icons/Feather';
@@ -57,28 +59,6 @@ const DATA = [
 
   },
 ];
-const RowWiseData = ({ title, title2 }) => (
-  <View style={styles.item}>
-    <View style={{ flex: 1 }}></View>
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "flex-end" }}>
-      <Text style={{ fontSize: 15, marginRight: 15 }}>{title}</Text>
-      {title2 &&
-        <Text style={{ fontSize: 15, marginRight: 15 }}>{title2}</Text>
-      }
-    </View>
-  </View>
-);
-const ColumnWise = ({ title, title2 }) => (
-  <View style={styles.item2}>
-    <View style={{ flex: 1 }}></View>
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontSize: 15, }}>{title}</Text>
-      {title2 &&
-        <Text style={{ fontSize: 15, }}>{title2}</Text>
-      }
-    </View>
-  </View>
-);
 const windowHeight = Dimensions.get('window').height - 24;
 const Home = () => {
   const [twoScreen, setTwoScreen] = useState(true)
@@ -86,7 +66,7 @@ const Home = () => {
   const [value, onChangeText] = useState(true)
   const renderItem = ({ item }) => (
     twoScreen ?
-      <RowWiseData title={item.title} title2={item.title2} />
+      <RowWise title={item.title} title2={item.title2} />
       :
       <ColumnWise title={item.title} title2={item.title2} />
   );
@@ -214,23 +194,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between"
   },
-  item: {
-    height: 90,
-    width: "100%",
-    borderWidth: 1,
-    borderRadius: 3,
-    borderColor: Colors.slideClr,
-    flexDirection: "row",
-    marginBottom: 10
-  },
-  item2: {
-    height: 170,
-    width: "48%",
-    borderWidth: 1,
-    borderRadius: 3,
-    borderColor: Colors.slideClr,
-    marginBottom: 10,
-    marginRight: 10
-  },
+   
+   
 });
 export default Home;

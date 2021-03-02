@@ -1,20 +1,96 @@
 import React from "react";
-import { connect } from 'react-redux';
 import AppContainer from '../../../container/AppContainer';
-import { Text, View, } from 'react-native';
+import FastImage from 'react-native-fast-image';
+import Colors from '../../../common/Colors';
+import Setting from "../../../components/Settings";
+import { Text, View, StyleSheet, FlatList } from 'react-native';
+const DATA = [
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+    title: "Notifications"
 
+  },
+  {
+    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+    title: "Payment"
+  },
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: "Transactions"
+  },
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: "Location"
+  },
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: "Password"
+  },
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: "Support"
+  },
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: "About"
+  },
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: "Sign Out"
+  },
+];
 const SettingScreen = ({ }) => {
+  const renderItem = ({ item }) => (
+    <Setting title={item.title} />
+  );
   return (
     <AppContainer route={"SettingScreen"} >
       {/* body */}
       <View style={{ flex: 7.8, width: "100%", }}>
-        <Text >SettingScreen</Text>
+        <View style={styles.header}>
+          <View style={{ flex: 2.2, justifyContent: "center", alignItems: "center" }}>
+            <View style={styles.profilePhoto}></View>
+          </View>
+          <View style={{ flex: 5.8, justifyContent: "center", }}>
+            <Text
+              style={{ fontSize: 20 }}>Linda jhonston
+            </Text>
+            <Text
+              style={{ fontSize: 13, color: Colors.slideClr }}>Show Profile
+            </Text>
+          </View>
+          <View style={{ flex: 2, justifyContent: "center", alignItems: "flex-end" }}>
+            <FastImage
+              style={{ height: "60%", width: "60%", }}
+              source={require("../../../assets/google.png")}
+              resizeMode={FastImage.resizeMode.contain}
+            />
+          </View>
+        </View>
+        <View style={{ flex: 8.5, paddingHorizontal: 20 }}>
+          <FlatList
+            data={DATA}
+            renderItem={renderItem}
+            keyExtractor={item => item.id}
+          />
+        </View>
       </View>
     </AppContainer >
   )
 };
-const mapStateToProp = ({ root }) => ({
-})
-const mapDispatchToProp = (dispatch) => ({
-})
-export default connect(mapStateToProp, mapDispatchToProp)(SettingScreen);
+const styles = StyleSheet.create({
+  profilePhoto: {
+    width: "80%",
+    height: "80%",
+    borderRadius: 80,
+    backgroundColor: Colors.gray
+  },
+  header: {
+    flex: 1.5,
+    paddingHorizontal: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.gray,
+    flexDirection: "row"
+  }
+});
+export default SettingScreen;
