@@ -1,9 +1,15 @@
 import React from "react";
 import AppContainer from '../../../container/AppContainer';
-import FastImage from 'react-native-fast-image';
+import FastImage from 'react-native-fast-image'; 
 import Colors from '../../../common/Colors';
 import Setting from "../../../components/Settings";
-import { Text, View, StyleSheet, FlatList } from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  FlatList
+}
+  from 'react-native';
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -39,7 +45,7 @@ const DATA = [
     title: "Sign Out"
   },
 ];
-const SettingScreen = ({ }) => {
+const SettingScreen = () => {
   const renderItem = ({ item }) => (
     <Setting title={item.title} />
   );
@@ -49,7 +55,13 @@ const SettingScreen = ({ }) => {
       <View style={{ flex: 7.8, width: "100%", }}>
         <View style={styles.header}>
           <View style={{ flex: 2.2, justifyContent: "center", alignItems: "center" }}>
-            <View style={styles.profilePhoto}></View>
+            <View style={styles.profilePhoto}>
+            < FastImage
+          style={{ height: "100%", width: "100%", }}
+          source={require("../../../assets/Imageb.png")}
+          resizeMode={FastImage.resizeMode.contain}
+        />
+            </View>
           </View>
           <View style={{ flex: 5.8, justifyContent: "center", }}>
             <Text

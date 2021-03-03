@@ -54,8 +54,7 @@ const DATA = [
 ];
 const windowHeight = Dimensions.get('window').height - 24;
 const Home = () => {
-  const [twoScreen, setTwoScreen] = useState(true)
-  const [numColumns, setNumColumns] = useState(2)
+  const [twoScreen, setTwoScreen] = useState(true) 
   const [value, onChangeText] = useState(true)
   const renderItem = ({ item }) => (
     twoScreen ?

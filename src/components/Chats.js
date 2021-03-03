@@ -1,10 +1,18 @@
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import Colors from '../common/Colors';
 import React from "react";
+import {
+    View,
+    Text,
+    TouchableOpacity,
+    StyleSheet
+} from 'react-native';
+import { Actions } from 'react-native-router-flux';
 const Chats = ({ Name, Message, Date }) => {
     return (
-        <TouchableOpacity style={styles.item}>
+        <TouchableOpacity
+            onPress={() =>Actions.MsgScreen()}
+            style={styles.item}>
             <View style={{ flex: 2, justifyContent: "center", alignItems: "center" }}>
                 <View style={styles.profilePhoto}>
                     {Name == "Julian Dasilva" &&

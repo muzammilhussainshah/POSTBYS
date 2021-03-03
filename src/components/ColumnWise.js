@@ -1,10 +1,12 @@
 
-import { View, Text,   StyleSheet } from 'react-native';
+import { View, Text,   StyleSheet, TouchableOpacity } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import Colors from '../common/Colors';
 import React  from "react";
 const ColumnWise = ({ title, title2 }) => (
-    <View style={styles.item2}>
+    <TouchableOpacity
+  onPress={()=>Actions.Categories()}
+    style={styles.item2}>
       <View style={{ flex: 1 , alignItems:"center"}}>
       {title == "CES Tech" &&
         < FastImage
@@ -55,7 +57,7 @@ const ColumnWise = ({ title, title2 }) => (
           <Text style={{ fontSize: 15, }}>{title2}</Text>
         }
       </View>
-    </View>
+    </TouchableOpacity>
   );
 const styles = StyleSheet.create({
     item2: {

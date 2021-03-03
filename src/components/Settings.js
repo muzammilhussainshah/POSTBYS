@@ -2,6 +2,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { Actions } from "react-native-router-flux";
 import FastImage from 'react-native-fast-image';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -15,10 +16,17 @@ import {
     Switch
 } from 'react-native';
 const Setting = ({ title }) => {
-    const [isEnabled, setIsEnabled] = useState(true); 
+    const [isEnabled, setIsEnabled] = useState(true);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     return (
         <TouchableOpacity
+            onPress={() => {
+                {
+                    title == "About" ?
+                        Actions.AboutScreen() : null
+
+                }
+            }}
             activeOpacity={0.8}
             style={styles.item}>
             <View style={{ flex: 1.5, justifyContent: "center", alignItems: "center" }}>
@@ -65,10 +73,10 @@ const Setting = ({ title }) => {
                     />
                 }
                 {title == "About" &&
-                    <Ionicons
-                        name={"notifications"}
-                        size={20}
-                        style={{ color: Colors.slideClr }}
+                    <FastImage
+                        style={{ height: 20, width: 20, }}
+                        source={require("../assets/Group.png")}
+                        resizeMode={FastImage.resizeMode.contain}
                     />
                 }
                 {title == "Sign Out" &&
@@ -130,7 +138,7 @@ const styles = StyleSheet.create({
         flex: 5,
         alignItems: "center",
         flexDirection: "row",
-        justifyContent: "flex-end", 
+        justifyContent: "flex-end",
     },
     switchBtn: {
         borderColor: Colors.shade,

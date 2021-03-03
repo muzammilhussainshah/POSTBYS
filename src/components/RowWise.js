@@ -1,11 +1,14 @@
 
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text,TouchableOpacity, StyleSheet } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import Colors from '../common/Colors';
 import React from "react";
+import { Actions } from 'react-native-router-flux';
 
 const RowWise = ({ title, title2 }) => (
-  <View style={styles.item}>
+  <TouchableOpacity 
+  onPress={()=>Actions.Categories()}
+  style={styles.item}>
     <View style={{ flex: 1, }}>
       {title == "CES Tech" &&
         < FastImage
@@ -56,7 +59,7 @@ const RowWise = ({ title, title2 }) => (
         <Text style={{ fontSize: 15, marginRight: 15 }}>{title2}</Text>
       }
     </View>
-  </View>
+  </TouchableOpacity>
 );
 const styles = StyleSheet.create({
   item: {
