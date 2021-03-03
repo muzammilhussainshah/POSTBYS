@@ -24,7 +24,7 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
     const [messages, setMessages] = useState([]);
     return (
         < ScrollView style={{}}>
-            <View style={[styles.activeStatus, { justifyContent: "center", height: discription ? height / 6 : height / 11 }]}>
+            <View style={[styles.activeStatus, { justifyContent: "center", height: discription ? height / 6 : height / 11.5 }]}>
                 <View style={styles.activeStatusLSide}>
                     <View
                         onPress={() => Actions.pop()}
@@ -171,13 +171,15 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                     </View>
                 }
             </View>
-            <ScrollView style={styles.Chats}>
+            <ScrollView style={[styles.Chats, {
+                height: discription ? height / 1.35 : height / 1.22 
+            }]}>
                 <View style={styles.Timing}>
                     {Date ?
                         <Text>{Date}</Text> :
                         <Text>Today</Text>
                     }
-                </View> 
+                </View>
                 <View
                     style={styles.Msg3}>
                     <View style={{ alignItems: "flex-end", marginVertical: 10, width: "100%" }}>
@@ -194,7 +196,7 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                         </View>
                     </View>
 
-                </View> 
+                </View>
                 <View style={styles.Msg2}>
 
                     <View style={{ paddingBottom: 5, }}>
@@ -330,7 +332,6 @@ const styles = StyleSheet.create({
         letterSpacing: 0.5
     },
     Chats: {
-        height: height / 1.22,
         paddingHorizontal: 15,
     },
     Msg1: { flex: 3.3 },

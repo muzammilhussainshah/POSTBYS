@@ -94,8 +94,7 @@ const styles = StyleSheet.create({
   profilePhoto: {
     width: "80%",
     height: "80%",
-    borderRadius: 80,
-    backgroundColor: Colors.gray
+    borderRadius: 80, 
   },
   header: {
     flex: 1.5,
