@@ -9,6 +9,7 @@ import {
     TouchableOpacity,
     FlatList
 } from 'react-native';
+import { Actions } from "react-native-router-flux";
 const DATA = [
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -39,7 +40,9 @@ const PaymentmethodScreen = ({ }) => {
             <View
                 onPress={() => Actions.pop()}
                 style={styles.header}>
-                <TouchableOpacity  >
+                <TouchableOpacity  
+                onPress={()=>Actions.pop()}
+                >
                     <AntDesign
                         name={"arrowleft"}
                         size={30}

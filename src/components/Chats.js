@@ -9,9 +9,12 @@ import {
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 const Chats = ({ Name, Message, Date }) => {
+    const routChange = (rout) => {
+        Actions[rout]({ Name: Name,Message:Message,Date})
+    }
     return (
         <TouchableOpacity
-            onPress={() =>Actions.MsgScreen()}
+            onPress={() => routChange("MsgScreen")}
             style={styles.item}>
             <View style={{ flex: 2, justifyContent: "center", alignItems: "center" }}>
                 <View style={styles.profilePhoto}>
@@ -74,6 +77,7 @@ const Chats = ({ Name, Message, Date }) => {
                 </View>
             </View>
             <View style={{ flex: 6, justifyContent: "center" }}>
+                
                 <Text
                     style={{ fontSize: 17 }}>{Name}
                 </Text>

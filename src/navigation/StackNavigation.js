@@ -25,16 +25,15 @@ export default Route = () => {
         <Scene key='LoginScreen' component={LoginScreen} hideNavBar={true} />
         <Scene key='Categories' component={Categories} hideNavBar={true} />
         <Scene key='MsgScreen' component={MsgScreen} hideNavBar={true} />
-        <Scene key='PaymentmethodScreen' component={PaymentmethodScreen} hideNavBar={true} />
         <Scene key='Home' component={Home} hideNavBar={true} />
         <Scene key='SettingScreen' component={SettingScreen} hideNavBar={true} />
+        <Scene key='PaymentmethodScreen' component={PaymentmethodScreen} hideNavBar={true} />
         <Scene key='ChatScreen' component={ChatScreen} hideNavBar={true} />
         <Scene key='Plus' component={Plus} hideNavBar={true} />
         <Scene key='BagScreen' component={BagScreen} hideNavBar={true} />
         <Scene key='VarificationScreen' component={VarificationScreen} hideNavBar={true} />
         <Scene key='AboutScreen' component={AboutScreen} hideNavBar={true} />
         <Scene key='NewPassScreen' component={NewPassScreen} hideNavBar={true} />
-
         <Scene key='ChangePassword' component={ChangePassword} hideNavBar={true} />
         <Scene key='ForgotScreen' component={ForgotScreen} hideNavBar={true} />
         <Scene key='SignUpScreen' component={SignUpScreen} hideNavBar={true} />

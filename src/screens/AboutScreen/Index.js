@@ -10,6 +10,7 @@ import {
     TouchableOpacity,
     FlatList
 } from 'react-native';
+import { Actions } from "react-native-router-flux";
 const DATA = [
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -42,7 +43,9 @@ const AboutScreen = ({ }) => {
             <View
                 onPress={() => Actions.pop()}
                 style={styles.header}>
-                <TouchableOpacity style={{ flex: 4 }}>
+                <TouchableOpacity 
+                onPress={()=>Actions.pop()}
+                style={{ flex: 4 }}>
                     <AntDesign
                         name={"arrowleft"}
                         size={30}

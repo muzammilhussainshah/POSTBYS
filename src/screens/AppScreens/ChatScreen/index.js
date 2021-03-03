@@ -1,6 +1,6 @@
-import React, { useState } from "react"; 
-import Colors from "../../../common/Colors" 
-import Ionicons from 'react-native-vector-icons/Ionicons'; 
+import React, { useState } from "react";
+import Colors from "../../../common/Colors"
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather';
 import Chats from "../../../components/Chats";
 import AppContainer from '../../../container/AppContainer';
@@ -68,9 +68,6 @@ const DATA = [
 const windowHeight = Dimensions.get('window').height - 24;
 const ChatScreen = () => {
   const [value, onChangeText] = useState(true)
-  const renderItem = ({ item }) => (
-    <Chats Name={item.Name} Message={item.Message} Date={item.Date} />
-  );
   return (
     <AppContainer route={"ChatScreen"}   >
       <ScrollView style={{ height: windowHeight / 1.21 }}  >
@@ -105,7 +102,7 @@ const ChatScreen = () => {
           <View style={{ flex: 7.2 }}>
             <FlatList
               data={DATA}
-              renderItem={renderItem}
+              renderItem={({item}) => <Chats Name={item.Name} Message={item.Message} Date={item.Date} />}
               keyExtractor={item => item.id}
             />
           </View>

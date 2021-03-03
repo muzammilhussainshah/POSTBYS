@@ -51,11 +51,11 @@ const CategoryColumn = ({ title, discription, rate }) => (
         </Text>
       </View>
       <View style={{ flex: 4.5, overflow: "hidden" }}>
-        <Text style={{ fontSize: 12 ,color:Colors.slideClr}}>
-          {discription}
+        <Text style={{ fontSize: 13, color: Colors.slideClr }}>
+          {discription.substring(0, 79)}
         </Text>
       </View>
-      <View style={{ flex: 3.5, justifyContent: "space-between",alignItems:"center", flexDirection: "row" }}>
+      <View style={{ flex: 3.5, justifyContent: "space-between", alignItems: "center", flexDirection: "row" }}>
         <View style={{ height: "100%", justifyContent: "center", width: 40 }}>
           <View style={styles.bagIcon}>
             <Feather
@@ -79,14 +79,23 @@ const styles = StyleSheet.create({
   item2: {
     height: 220,
     width: "50%",
-    borderTopWidth: 1,   
-    borderRightWidth: 1, 
+    borderTopWidth: 1,
+    borderRightWidth: 1,
     borderColor: Colors.gray,
   },
   MsgBtn: {
     height: 25,
     width: 100,
     backgroundColor: Colors.black,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  bagIcon: {
+    height: "80%",
+    width: 30,
+    borderColor: Colors.gray,
+    borderRadius: 2,
+    borderWidth: 2,
     justifyContent: "center",
     alignItems: "center"
   },

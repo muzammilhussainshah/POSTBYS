@@ -17,42 +17,42 @@ import style from '../../../components/Footer/style';
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'Ronnie Pierce',
+    Name: 'Ronnie Pierce',
     discription: 'Does anuone carry salt-and papper diamond parceis if 1ct + per stone? Message me with your offers and prices.    ',
   },
   {
     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-    title: 'Leon Bennett',
+    Name: 'Leon Bennett',
     discription: 'Looking for butterfly shaped necklace jewelry designs in 18kt rose gold. please send me images, and price if you have. ',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Sonia Brown',
+    Name: 'Sonia Brown',
     discription: 'Does anuone carry salt-and papper diamond parceis if 1ct + per stone? Message me with your offers and prices.    ',
 
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Pauline Fisher',
+    Name: 'Pauline Fisher',
     discription: 'Please message me if you carry calibrated blue shapphire 3mm round gemstones, need 20 carats, No more tha $200?ct quality',
 
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Sharlene Edwards',
+    Name: 'Sharlene Edwards',
     discription: 'Looking for butterfly shaped necklace jewelry design in 18kt rose gold. Please send me images, videos and price if you have. ',
 
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'International apparela',
-    discription: '& Textile fair',
+    Name: 'International apparela',
+    discription: 'Looking for butterfly shaped necklace jewelry design in 18kt rose gold. Please send me images, videos and price if you have. ',
 
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'International apparel',
-    discription: '& Textile fair',
+    Name: 'International apparel',
+    discription: 'Please message me if you carry calibrated blue shapphire 3mm round gemstones, need 20 carats, No more tha $200?ct quality',
 
   },
 ];
@@ -60,7 +60,7 @@ const BagScreen = ({ }) => {
   const [arrayData, setArrayData] = useState(DATA)
   console.log(arrayData.indexOf())
   const renderItem = ({ item }) => (
-    <MyCart title={item.title} discription={item.discription} />
+    <MyCart Name={item.Name} discription={item.discription} />
   );
   return (
     <AppContainer
@@ -70,8 +70,8 @@ const BagScreen = ({ }) => {
         <View style={styles.header}>
           <Text style={{ fontSize: 22 }}>My Cart</Text>
           <TouchableOpacity>
-            <Text 
-            style={{ fontSize: 16, color: Colors.slideClr }}>Edit
+            <Text
+              style={{ fontSize: 16, color: Colors.slideClr }}>Edit
             </Text>
           </TouchableOpacity>
         </View>
@@ -85,7 +85,7 @@ const BagScreen = ({ }) => {
         <View style={styles.detailView}>
           <View style={styles.datailLength}>
             <Text style={{ fontSize: 18, color: Colors.slideClr }}>
-              Details: {DATA.length} item(s) 
+              Details: {DATA.length} item(s)
             </Text>
             <MaterialIcons
               name={"keyboard-arrow-up"}
@@ -96,7 +96,7 @@ const BagScreen = ({ }) => {
           <View style={{ flex: 1, justifyContent: "center", alignItems: "flex-end" }}>
             <TouchableOpacity style={styles.checkOutView}>
               <Text
-               style={{ color: Colors.white, fontSize: 16 }}>Check Out
+                style={{ color: Colors.white, fontSize: 16 }}>Check Out
               </Text>
             </TouchableOpacity>
           </View>

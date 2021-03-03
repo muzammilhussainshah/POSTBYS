@@ -5,58 +5,61 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Colors from '../common/Colors';
 import React, { useEffect, useState } from "react";
-const MyCart = ({ title, discription }) => {
+import { Actions } from 'react-native-router-flux';
+const MyCart = ({ Name, discription }) => {
     const [checked, setChecked] = useState(true)
-    useEffect(() => {
-    })
+    const routChange = (rout) => {
+        Actions[rout]({ Name: Name, discription: discription })
+    }
     return (
-        <View style={styles.item}>
+        <TouchableOpacity
+            onPress={() => routChange("MsgScreen")}
+            style={styles.item}>
             <View style={{ flex: 2.5, justifyContent: "center", alignItems: "flex-end" }}>
                 <View style={styles.CartImg}>
-
-                    {title == "Ronnie Pierce" &&
+                    {Name == "Ronnie Pierce" &&
                         < FastImage
                             style={{ height: 100, width: 100, }}
                             source={require("../assets/Bitmapb.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
-                    {title == "Leon Bennett" &&
+                    {Name == "Leon Bennett" &&
                         < FastImage
                             style={{ height: 100, width: 100, }}
                             source={require("../assets/Bitmapa.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
-                    {title == "Sonia Brown" &&
+                    {Name == "Sonia Brown" &&
                         < FastImage
                             style={{ height: 100, width: 100, }}
                             source={require("../assets/Bitmapc.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
-                    {title == "Pauline Fisher" &&
+                    {Name == "Pauline Fisher" &&
                         < FastImage
                             style={{ height: 100, width: 100, }}
                             source={require("../assets/Bitmapd.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
-                    {title == "Sharlene Edwards" &&
+                    {Name == "Sharlene Edwards" &&
                         < FastImage
                             style={{ height: 100, width: 100, }}
                             source={require("../assets/Bitmag.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
-                    {title == "International apparela" &&
+                    {Name == "International apparela" &&
                         < FastImage
                             style={{ height: 100, width: 100, }}
                             source={require("../assets/Bitmapb.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
-                    {title == "International apparel" &&
+                    {Name == "International apparel" &&
                         < FastImage
                             style={{ height: 100, width: 100, }}
                             source={require("../assets/Bitmapc.png")}
@@ -66,19 +69,22 @@ const MyCart = ({ title, discription }) => {
                 </View>
             </View>
             <View style={{ flex: 6.3, paddingVertical: 5, justifyContent: "space-evenly" }}>
-                <Text >{title}
+                <Text >{Name}
                 </Text>
                 <Text
                     style={{ fontSize: 12, color: Colors.slideClr }}>{discription}
                 </Text>
-                <TouchableOpacity style={styles.MsgBtn}>
+                <TouchableOpacity
+                    onPress={() => routChange("MsgScreen")}
+                    style={styles.MsgBtn}>
                     <Text
                         style={{ color: Colors.white }}>Message
                     </Text>
                 </TouchableOpacity>
             </View>
             <View style={styles.CheckMark}>
-                <TouchableOpacity onPress={() => setChecked(!checked)}>
+                <TouchableOpacity
+                    onPress={() => setChecked(!checked)}>
                     {checked ?
                         <AntDesign
                             name={"checkcircle"}
@@ -91,7 +97,7 @@ const MyCart = ({ title, discription }) => {
                     }
                 </TouchableOpacity>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 }
 const styles = StyleSheet.create({
@@ -106,10 +112,10 @@ const styles = StyleSheet.create({
     CartImg: {
         height: "85%",
         width: '80%',
-        marginRight: 10, 
+        marginRight: 10,
         borderRadius: 10,
-        justifyContent:"center",
-        alignItems:"center"
+        justifyContent: "center",
+        alignItems: "center"
     },
     MsgBtn: {
         height: 35,

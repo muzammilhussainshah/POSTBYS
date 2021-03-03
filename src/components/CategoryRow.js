@@ -72,7 +72,7 @@ const CategoryRow = ({ title, discription, rate }) => {
           </View>
         </View>
         <View style={{ flex: 5 }}>
-          <Text style={{ color: Colors.slideClr }}>{discriptiona}</Text>
+          <Text style={{ color: Colors.slideClr, fontSize: 14, letterSpacing: -0.2 }}>{discriptiona.substring(0, 130)}</Text>
         </View>
         <View style={{ flex: 3, justifyContent: "space-between", flexDirection: "row" }}>
           <View style={{ height: "100%", justifyContent: "center", width: 40 }}>
@@ -98,9 +98,9 @@ const styles = StyleSheet.create({
   item: {
     height: 130,
     width: "100%",
-    borderTopWidth:1,
+    borderTopWidth: 1,
     borderColor: Colors.slideClr,
-    flexDirection: "row", 
+    flexDirection: "row",
   },
   MsgBtn: {
     height: 30,
