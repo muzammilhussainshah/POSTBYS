@@ -15,6 +15,8 @@ import SettingScreen from "../screens/AppScreens/SettingScreen/index";
 import PaymentmethodScreen from "../screens/PaymentMethodScreen/index";
 import MsgScreen from "../screens/MsgScreen/index";
 import Categories from "../screens/Categories/index";
+import SupportScreen from "../screens/SupportScreen/index";
+import TransactionScreen from "../screens/TransactionScreen/index";
 export default Route = () => {
   return (
     <Router
@@ -23,6 +25,8 @@ export default Route = () => {
       tintColor="white">
       <Scene>
         <Scene key='LoginScreen' component={LoginScreen} hideNavBar={true} />
+        <Scene key='TransactionScreen' component={TransactionScreen} hideNavBar={true} />
+        <Scene key='SupportScreen' component={SupportScreen} hideNavBar={true} />
         <Scene key='Categories' component={Categories} hideNavBar={true} />
         <Scene key='MsgScreen' component={MsgScreen} hideNavBar={true} />
         <Scene key='Home' component={Home} hideNavBar={true} />

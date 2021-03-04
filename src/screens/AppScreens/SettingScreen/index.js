@@ -1,6 +1,6 @@
 import React from "react";
 import AppContainer from '../../../container/AppContainer';
-import FastImage from 'react-native-fast-image'; 
+import FastImage from 'react-native-fast-image';
 import Colors from '../../../common/Colors';
 import Setting from "../../../components/Settings";
 import {
@@ -56,11 +56,11 @@ const SettingScreen = () => {
         <View style={styles.header}>
           <View style={{ flex: 2.2, justifyContent: "center", alignItems: "center" }}>
             <View style={styles.profilePhoto}>
-            < FastImage
-          style={{ height: "100%", width: "100%", }}
-          source={require("../../../assets/Imageb.png")}
-          resizeMode={FastImage.resizeMode.contain}
-        />
+              < FastImage
+                style={{ height: "80%", width: "80%", }}
+                source={require("../../../assets/Imageb.png")}
+                resizeMode={FastImage.resizeMode.contain}
+              />
             </View>
           </View>
           <View style={{ flex: 5.8, justifyContent: "center", }}>
@@ -94,7 +94,9 @@ const styles = StyleSheet.create({
   profilePhoto: {
     width: "80%",
     height: "80%",
-    borderRadius: 80, 
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 80,
   },
   header: {
     flex: 1.5,

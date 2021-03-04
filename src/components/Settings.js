@@ -21,8 +21,10 @@ const Setting = ({ title }) => {
     return (
         <TouchableOpacity
             onPress={() => {
-                { title == "About" ? Actions.AboutScreen() : null }
-                { title == "Payment" ? Actions.PaymentmethodScreen() : null }
+                { title == "Transactions" && Actions.TransactionScreen() }
+                { title == "About" && Actions.AboutScreen()   }
+                { title == "Support" && Actions.SupportScreen()   }
+                { title == "Payment" && Actions.PaymentmethodScreen()   }
             }}
             activeOpacity={0.8}
             style={styles.item}>
