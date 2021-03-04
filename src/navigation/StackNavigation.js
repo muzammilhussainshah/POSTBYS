@@ -25,10 +25,10 @@ export default Route = () => {
       titleStyle={{ color: "white" }}
       tintColor="white">
       <Scene>
-        <Scene key='LoginScreen' component={LoginScreen} hideNavBar={true} />
+        {/* <Scene key='LoginScreen' component={LoginScreen} hideNavBar={true} /> */}
         <Scene key='MyProfileScreen' component={MyProfileScreen} hideNavBar={true} />
-        <Scene key='TransactionScreen' component={TransactionScreen} hideNavBar={true} />
-        <Scene key='SupportScreen' component={SupportScreen} hideNavBar={true} />
+        {/* <Scene key='TransactionScreen' component={TransactionScreen} hideNavBar={true} /> */}
+        {/* <Scene key='SupportScreen' component={SupportScreen} hideNavBar={true} /> */}
         <Scene key='Categories' component={Categories} hideNavBar={true} />
         <Scene key='MsgScreen' component={MsgScreen} hideNavBar={true} />
         <Scene key='Home' component={Home} hideNavBar={true} />
