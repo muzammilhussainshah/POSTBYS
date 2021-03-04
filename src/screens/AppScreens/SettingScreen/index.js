@@ -7,9 +7,10 @@ import {
   Text,
   View,
   StyleSheet,
+  TouchableOpacity,
   FlatList
-}
-  from 'react-native';
+} from 'react-native';
+import { Actions } from "react-native-router-flux";
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -54,7 +55,10 @@ const SettingScreen = () => {
       {/* body */}
       <View style={{ flex: 7.8, width: "100%", }}>
         <View style={styles.header}>
-          <View style={{ flex: 2.2, justifyContent: "center", alignItems: "center" }}>
+          <TouchableOpacity
+            onPress={() => Actions.MyProfileScreen()}
+            activeOpacity={0.8}
+            style={{ flex: 2.2, justifyContent: "center", alignItems: "center" }}>
             <View style={styles.profilePhoto}>
               < FastImage
                 style={{ height: "80%", width: "80%", }}
@@ -62,15 +66,18 @@ const SettingScreen = () => {
                 resizeMode={FastImage.resizeMode.contain}
               />
             </View>
-          </View>
-          <View style={{ flex: 5.8, justifyContent: "center", }}>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => Actions.MyProfileScreen()}
+            activeOpacity={0.8}
+            style={{ flex: 5.8, justifyContent: "center", }}>
             <Text
               style={{ fontSize: 20 }}>Linda jhonston
             </Text>
             <Text
               style={{ fontSize: 13, color: Colors.slideClr }}>Show Profile
             </Text>
-          </View>
+          </TouchableOpacity>
           <View style={{ flex: 2, justifyContent: "center", alignItems: "flex-end" }}>
             <FastImage
               style={{ height: "60%", width: "60%", }}
