@@ -170,7 +170,6 @@ const MyProfileScreen = ({ }) => {
                             />
                             <View style={styles.underLine}></View>
                         </TouchableOpacity>
-
                     </View>
                     <View style={styles.header2}>
                         <TouchableOpacity
@@ -300,7 +299,6 @@ const MyProfileScreen = ({ }) => {
                 </View>
             </View>
         </ScrollView>
-
     )
 };
 const styles = StyleSheet.create({

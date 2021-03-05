@@ -18,6 +18,8 @@ import Categories from "../screens/Categories/index";
 import SupportScreen from "../screens/SupportScreen/index";
 import TransactionScreen from "../screens/TransactionScreen/index";
 import MyProfileScreen from "../screens/MyProfileScreen/index";
+import LocationScreen from "../screens/LocationScreen/index"
+import PostItemScreen from "../screens/PostItemScreen/index"
 export default Route = () => {
   return (
     <Router
@@ -25,10 +27,12 @@ export default Route = () => {
       titleStyle={{ color: "white" }}
       tintColor="white">
       <Scene>
-        {/* <Scene key='LoginScreen' component={LoginScreen} hideNavBar={true} /> */}
+        <Scene key='PostItemScreen' component={PostItemScreen} hideNavBar={true} />
+        <Scene key='LoginScreen' component={LoginScreen} hideNavBar={true} />
         <Scene key='MyProfileScreen' component={MyProfileScreen} hideNavBar={true} />
-        {/* <Scene key='TransactionScreen' component={TransactionScreen} hideNavBar={true} /> */}
-        {/* <Scene key='SupportScreen' component={SupportScreen} hideNavBar={true} /> */}
+        <Scene key='LocationScreen' component={LocationScreen} hideNavBar={true} />
+        <Scene key='TransactionScreen' component={TransactionScreen} hideNavBar={true} />
+        <Scene key='SupportScreen' component={SupportScreen} hideNavBar={true} />
         <Scene key='Categories' component={Categories} hideNavBar={true} />
         <Scene key='MsgScreen' component={MsgScreen} hideNavBar={true} />
         <Scene key='Home' component={Home} hideNavBar={true} />

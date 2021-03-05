@@ -4,7 +4,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Colors from '../common/Colors';
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Actions } from 'react-native-router-flux';
 const MyCart = ({ Name, discription }) => {
     const [checked, setChecked] = useState(true)

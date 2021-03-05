@@ -17,6 +17,7 @@ import {
   FlatList,
   StyleSheet,
 } from 'react-native';
+import { acc } from "react-native-reanimated";
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -60,7 +61,7 @@ const DATA = [
   },
 ];
 const windowHeight = Dimensions.get('window').height - 24;
-const Categories = () => {
+const Categories = ({ title }) => {
   const [twoScreen, setTwoScreen] = useState(true)
   const renderItem = ({ item }) => (
     twoScreen ?
@@ -71,6 +72,16 @@ const Categories = () => {
   return (
     <ScrollView style={{ height: windowHeight / 1.21 }}  >
       <View style={{ height: windowHeight / 1 }}>
+        <View style={{ top: "90%", left: "35%", position: "absolute", zIndex: 2, }}>
+          <TouchableOpacity style={styles.AbsolutedWork}>
+            <AntDesign
+              name={"plus"}
+              size={25}
+              style={{ color: Colors.white }}
+            />
+            <Text style={{ color: Colors.white, fontSize: 17, marginLeft: 5 }}>Postbys</Text>
+          </TouchableOpacity>
+        </View>
         <View style={styles.header}>
           <TouchableOpacity
             onPress={() => Actions.pop()}
@@ -108,7 +119,7 @@ const Categories = () => {
           </View>
         </View>
         <View style={styles.tradeshows}>
-          <Text style={{ fontSize: 20 }}>Tradeshows</Text>
+          <Text style={{ fontSize: 20 }}>{title}</Text>
           <View style={{ flexDirection: "row" }}>
             <TouchableOpacity>
               <Entypo
@@ -170,7 +181,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 10,
   },
-
+  AbsolutedWork: {
+    height: "100%",
+    justifyContent: 'center',
+    flexDirection: "row",
+    alignItems: "center",
+    width: 130,
+    backgroundColor: Colors.black,
+    borderRadius: 25, marginBottom: 20
+  },
   tradeshows: {
     flex: 1,
     flexDirection: "row",

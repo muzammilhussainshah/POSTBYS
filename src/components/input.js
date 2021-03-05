@@ -21,7 +21,7 @@ const CustomPicker = ({ maxLength, width, Name, Email, Password, placeholderText
       </View>
       <View style={{ flex: 8.7 }}>
         <TextInput
-          style={{ fontSize: 17, width: width, }}
+          style={{ fontSize: 17, width: width,backgroundColor:'red' }}
           maxLength={maxLength}
           onChangeText={(text) => _func(text)}
           placeholder={placeHolder}

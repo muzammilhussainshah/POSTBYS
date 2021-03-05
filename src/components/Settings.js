@@ -24,6 +24,7 @@ const Setting = ({ title }) => {
                 { title == "Transactions" && Actions.TransactionScreen() }
                 { title == "About" && Actions.AboutScreen()   }
                 { title == "Support" && Actions.SupportScreen()   }
+                { title == "Location" && Actions.LocationScreen()   }
                 { title == "Payment" && Actions.PaymentmethodScreen()   }
             }}
             activeOpacity={0.8}

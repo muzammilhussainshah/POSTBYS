@@ -7,7 +7,7 @@ import { Actions } from 'react-native-router-flux';
 
 const RowWise = ({ title, title2 }) => (
   <TouchableOpacity 
-  onPress={()=>Actions.Categories()}
+  onPress={()=>Actions.Categories({title})}
   style={styles.item}>
     <View style={{ flex: 1, }}>
       {title == "CES Tech" &&
