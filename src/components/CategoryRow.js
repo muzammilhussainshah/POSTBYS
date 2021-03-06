@@ -66,7 +66,6 @@ const CategoryRow = ({ title, discription, rate }) => {
             <Entypo
               name={"star"}
               size={16}
-              style={{ color: Colors.slideClr }}
             />
             <Text>{rate}</Text>
           </View>
@@ -127,4 +126,4 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
 });
-export default CategoryRow; 
+export default CategoryRow;

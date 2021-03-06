@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Colors from "../../common/Colors"
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import CategoryColumn from "../../components/CategoryColumn";
 import { Actions } from 'react-native-router-flux';
+import CategoryColumn from "../../components/CategoryColumn";
 import CategoryRow from "../../components/CategoryRow";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -72,7 +72,7 @@ const Categories = ({ title }) => {
   return (
     <ScrollView style={{ height: windowHeight / 1.21 }}  >
       <View style={{ height: windowHeight / 1 }}>
-        <View style={{ top: "90%", left: "35%", position: "absolute", zIndex: 2, }}>
+        <View style={{ top: "90%", left: "35%", position: "absolute", zIndex: 2 }}>
           <TouchableOpacity style={styles.AbsolutedWork}>
             <AntDesign
               name={"plus"}

@@ -9,10 +9,12 @@ import {
   TouchableOpacity,
   StyleSheet
 } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 const MyPost = ({ title, discription, rate }) => {
   const [discriptiona, setDiscription] = useState(discription)
   return (
     <TouchableOpacity
+      onPress={() => Actions.ProductScreen({title,discription,rate})}
       style={styles.item}>
       <View style={{ flex: 3.5 }}>
         {title == "Sharlene Edwards" &&
@@ -110,4 +112,4 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
 });
-export default MyPost; 
+export default MyPost;

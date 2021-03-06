@@ -1,4 +1,5 @@
 
+import Entypo from 'react-native-vector-icons/Entypo';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import FastImage from 'react-native-fast-image';
@@ -7,42 +8,65 @@ import React from "react";
 const CategoryColumn = ({ title, discription, rate }) => (
   <TouchableOpacity
     style={styles.item2}>
-    <View style={{ flex: 4, alignItems: "center" }}>
+    <View style={{ flex: 4, flexDirection: "row" }}>
       {title == "Sharlene Edwards" &&
-        < FastImage
-          style={{ height: "100%", width: "100%", }}
-          source={require("../assets/Bitmag.png")}
-          resizeMode={FastImage.resizeMode.contain}
-        />
+        <View style={{ flex: 7, alignItems: "flex-end" }}>
+
+          < FastImage
+            style={{ height: "100%", width: 85, }}
+            source={require("../assets/Bitmag.png")}
+            resizeMode={FastImage.resizeMode.contain}
+          />
+        </View>
       }
       {title == "Ronnie Pierce" &&
-        < FastImage
-          style={{ height: "100%", width: "100%", }}
-          source={require("../assets/Bitmapb.png")}
-          resizeMode={FastImage.resizeMode.contain}
-        />
+        <View style={{ flex: 7, alignItems: "flex-end" }}>
+
+          < FastImage
+            style={{ height: "100%", width: 85, }}
+            source={require("../assets/Bitmapb.png")}
+            resizeMode={FastImage.resizeMode.contain}
+          />
+        </View>
       }
       {title == "Sonia Brown" &&
-        < FastImage
-          style={{ height: "100%", width: "100%", }}
-          source={require("../assets/Bitmapc.png")}
-          resizeMode={FastImage.resizeMode.contain}
-        />
+        <View style={{ flex: 7, alignItems: "flex-end" }}>
+
+          < FastImage
+            style={{ height: "100%", width: 85, }}
+            source={require("../assets/Bitmapc.png")}
+            resizeMode={FastImage.resizeMode.contain}
+          />
+        </View>
       }
       {title == "Paulibne Fisher" &&
-        < FastImage
-          style={{ height: "100%", width: "100%", }}
-          source={require("../assets/Bitmapd.png")}
-          resizeMode={FastImage.resizeMode.contain}
-        />
+        <View style={{ flex: 7, alignItems: "flex-end" }}>
+
+          < FastImage
+            style={{ height: "100%", width: 85, }}
+            source={require("../assets/Bitmapd.png")}
+            resizeMode={FastImage.resizeMode.contain}
+          />
+        </View>
       }
       {title == "Leon Bennett" &&
-        < FastImage
-          style={{ height: "100%", width: "100%", }}
-          source={require("../assets/Bitmapa.png")}
-          resizeMode={FastImage.resizeMode.contain}
-        />
+        <View style={{ flex: 7, alignItems: "flex-end" }}>
+
+          < FastImage
+            style={{ height: "100%", width: 85, }}
+            source={require("../assets/Bitmapa.png")}
+            resizeMode={FastImage.resizeMode.contain}
+          />
+        </View>
       }
+      <View style={{ flex: 3, marginTop: 5, flexDirection: "row", justifyContent: "flex-end" }}>
+        <Entypo
+          name={"star"}
+          size={15}
+          style={{ marginRight: 5}}
+        />
+        <Text style={{ fontSize: 13, marginRight: 10, color: Colors.slideClr }}>{rate}</Text>
+      </View>
     </View>
     <View style={{ flex: 6, paddingHorizontal: 15 }}>
       <View style={{ flex: 2, }}>

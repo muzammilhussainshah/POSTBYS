@@ -20,6 +20,7 @@ import TransactionScreen from "../screens/TransactionScreen/index";
 import MyProfileScreen from "../screens/MyProfileScreen/index";
 import LocationScreen from "../screens/LocationScreen/index"
 import PostItemScreen from "../screens/PostItemScreen/index"
+import ProductScreen from "../screens/ProductScreen/index"
 export default Route = () => {
   return (
     <Router
@@ -27,8 +28,9 @@ export default Route = () => {
       titleStyle={{ color: "white" }}
       tintColor="white">
       <Scene>
-        <Scene key='PostItemScreen' component={PostItemScreen} hideNavBar={true} />
         <Scene key='LoginScreen' component={LoginScreen} hideNavBar={true} />
+        <Scene key='ProductScreen' component={ProductScreen} hideNavBar={true} />
+        <Scene key='PostItemScreen' component={PostItemScreen} hideNavBar={true} />
         <Scene key='MyProfileScreen' component={MyProfileScreen} hideNavBar={true} />
         <Scene key='LocationScreen' component={LocationScreen} hideNavBar={true} />
         <Scene key='TransactionScreen' component={TransactionScreen} hideNavBar={true} />
