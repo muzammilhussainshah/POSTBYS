@@ -184,7 +184,6 @@ const MyProfileScreen = ({ }) => {
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity
-                            onPress={() => Actions.MyProfileScreen()}
                             activeOpacity={0.8}
                             style={{ flex: 7.8, }}>
                             <Text

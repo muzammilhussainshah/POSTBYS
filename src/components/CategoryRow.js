@@ -75,7 +75,7 @@ const CategoryRow = ({ title, discription, rate }) => {
             style={{ color: Colors.slideClr, fontSize: 14, letterSpacing: -0.2 }}>{discriptiona.substring(0, 130)}
           </Text>
         </View>
-        <View style={{ flex: 3, justifyContent: "space-between", flexDirection: "row" }}>
+        <View style={styles.MsgBtnView}>
           <View style={{ height: "100%", justifyContent: "center", width: 40 }}>
             <View style={styles.bagIcon}>
               <Feather
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   MsgBtn: {
-    height: "75%",
+    height: "80%",
     width: 100,
     backgroundColor: Colors.black,
     justifyContent: "center",
@@ -125,5 +125,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
+  MsgBtnView: {
+    flex: 3,
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "center"
+  }
 });
 export default CategoryRow;

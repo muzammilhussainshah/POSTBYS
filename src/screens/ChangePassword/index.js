@@ -15,7 +15,7 @@ import {
     TouchableOpacity,
 } from 'react-native';
 const screenHeight = Dimensions.get('window').height - 24;
-const ChangePassword = ({ }) => { 
+const ChangePassword = ({ }) => {
     const [oldPass, setOldPass] = useState("")
     const [newPass, setNewPass] = useState("")
     const [againNewPass, setAgainNewPass] = useState("")
@@ -29,7 +29,9 @@ const ChangePassword = ({ }) => {
                 <View
                     onPress={() => Actions.pop()}
                     style={{ flex: 1, flexDirection: "row", justifyContent: "center" }}>
-                    <TouchableOpacity style={{ flex: 2 }}>
+                    <TouchableOpacity
+                        onPress={() => Actions.pop()}
+                        style={{ flex: 2 }}>
                         <AntDesign
                             name={"arrowleft"}
                             size={30}
@@ -106,9 +108,9 @@ const ChangePassword = ({ }) => {
                             }
                         </TouchableOpacity>
                     </View>
-                    <View style={{marginTop:"25%"}}>
+                    <View style={{ marginTop: "25%" }}>
                         <LoginBtn
-                            _func={()=> Actions.NewPassScreen()}
+                            _func={() => Actions.NewPassScreen()}
                             name={"Save"}
                             backgroundColor={Colors.black}
                             textColor={Colors.white}

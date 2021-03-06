@@ -14,7 +14,7 @@ const MyPost = ({ title, discription, rate }) => {
   const [discriptiona, setDiscription] = useState(discription)
   return (
     <TouchableOpacity
-      onPress={() => Actions.ProductScreen({title,discription,rate})}
+      onPress={() => Actions.ProductScreen({ title, discription, rate })}
       style={styles.item}>
       <View style={{ flex: 3.5 }}>
         {title == "Sharlene Edwards" &&
@@ -71,7 +71,10 @@ const MyPost = ({ title, discription, rate }) => {
           </Text>
         </View>
         <View style={{ flex: 3, justifyContent: "flex-end", alignItems: "center", flexDirection: "row" }}>
-          <TouchableOpacity style={styles.MsgBtn}>
+          <TouchableOpacity
+            onPress={() => Actions.ProductScreen({ title, discription, rate })}
+
+            style={styles.MsgBtn}>
             <Text
               style={{ color: Colors.white, fontSize: 13 }}>Details
                     </Text>

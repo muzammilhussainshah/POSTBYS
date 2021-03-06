@@ -26,6 +26,7 @@ const Setting = ({ title }) => {
                 { title == "Support" && Actions.SupportScreen()   }
                 { title == "Location" && Actions.LocationScreen()   }
                 { title == "Payment" && Actions.PaymentmethodScreen()   }
+                { title == "Password" && Actions.ChangePassword()   }
             }}
             activeOpacity={0.8}
             style={styles.item}>

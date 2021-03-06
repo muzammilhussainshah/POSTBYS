@@ -20,11 +20,6 @@ const Supports = ({ title }) => {
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     return (
         <TouchableOpacity
-            onPress={() => {
-                { title == "About" && Actions.AboutScreen() }
-                { title == "Support" && Actions.SupportScreen() }
-                { title == "Payment" && Actions.PaymentmethodScreen() }
-            }}
             activeOpacity={0.8}
             style={styles.item}>
             <View style={{ justifyContent: "center" }}>
@@ -32,15 +27,11 @@ const Supports = ({ title }) => {
                     style={{ fontSize: 17 }}>{title}
                 </Text>
             </View>
-            {/* <View style={styles.Settings}> */}
-
-                <MaterialIcons
-                    name={"keyboard-arrow-right"}
-                    size={30}
-                    style={{ color: Colors.slideClr }}
-                />
-
-            {/* </View> */}
+            <MaterialIcons
+                name={"keyboard-arrow-right"}
+                size={30}
+                style={{ color: Colors.slideClr }}
+            />
         </TouchableOpacity>
     );
 }
@@ -50,7 +41,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         borderBottomWidth: 1,
         borderRadius: 3,
-        justifyContent:"space-between",
+        justifyContent: "space-between",
         borderColor: Colors.gray,
         flexDirection: "row",
     },

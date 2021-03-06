@@ -63,7 +63,7 @@ const CategoryColumn = ({ title, discription, rate }) => (
         <Entypo
           name={"star"}
           size={15}
-          style={{ marginRight: 5}}
+          style={{ marginRight: 5 }}
         />
         <Text style={{ fontSize: 13, marginRight: 10, color: Colors.slideClr }}>{rate}</Text>
       </View>
@@ -79,7 +79,7 @@ const CategoryColumn = ({ title, discription, rate }) => (
           {discription.substring(0, 79)}
         </Text>
       </View>
-      <View style={{ flex: 3.5, justifyContent: "space-between", alignItems: "center", flexDirection: "row" }}>
+      <View style={styles.MsgBtnView}>
         <View style={{ height: "100%", justifyContent: "center", width: 40 }}>
           <View style={styles.bagIcon}>
             <Feather
@@ -92,7 +92,7 @@ const CategoryColumn = ({ title, discription, rate }) => (
         <TouchableOpacity style={styles.MsgBtn}>
           <Text
             style={{ color: Colors.white, fontSize: 12 }}>Message
-                    </Text>
+        </Text>
         </TouchableOpacity>
       </View>
 
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     borderColor: Colors.gray,
   },
   MsgBtn: {
-    height: 25,
+    height: "70%",
     width: 100,
     backgroundColor: Colors.black,
     justifyContent: "center",
@@ -123,5 +123,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
+  MsgBtnView: {
+    flex: 3.5,
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexDirection: "row"
+  }
 });
 export default CategoryColumn;
