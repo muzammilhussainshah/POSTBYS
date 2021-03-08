@@ -11,11 +11,12 @@ import {
   StyleSheet
 } from 'react-native';
 const CategoryRow = ({ title, discription, rate }) => {
+  const [readMore, setReadMore] = useState("...Read More")
   const [discriptiona, setDiscription] = useState(discription)
   return (
     <TouchableOpacity
       style={styles.item}>
-      <View style={{ flex: 3.5,alignItems:"center",paddingTop:5 }}>
+      <View style={{ flex: 3.5, alignItems: "center", paddingTop: 5 }}>
         {title == "Sharlene Edwards" &&
           < FastImage
             style={{ height: "95%", width: "95%", }}
@@ -70,10 +71,14 @@ const CategoryRow = ({ title, discription, rate }) => {
             <Text>{rate}</Text>
           </View>
         </View>
-        <View style={{ flex: 5, overflow: "hidden" }}>
+        <View style={{
+          flex: 5, flexDirection: 'row', 
+        }}>
           <Text
             style={{ color: Colors.slideClr, fontSize: 14, letterSpacing: -0.2 }}>{discriptiona.substring(0, 130)}
-          </Text>
+            {discriptiona.length > 129 && readMore
+            }
+          </Text> 
         </View>
         <View style={styles.MsgBtnView}>
           <View style={{ height: "100%", justifyContent: "center", width: 40 }}>

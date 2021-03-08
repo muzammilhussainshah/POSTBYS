@@ -16,11 +16,11 @@ const MyPost = ({ title, discription, rate }) => {
     <TouchableOpacity
       onPress={() => Actions.ProductScreen({ title, discription, rate })}
       style={styles.item}>
-      <View style={{ flex: 3.5 }}>
+      <View style={{ flex: 3.5,justifyContent:"center",alignItems:"center" }}>
         {title == "Sharlene Edwards" &&
           < FastImage
-            style={{ height: "100%", width: "100%", }}
-            source={require("../assets/Bitmag.png")}
+            style={{ height: "90%", width: "90%", }}
+            source={require("../assets/Bitmapa.png")}
             resizeMode={FastImage.resizeMode.contain}
           />
         }
@@ -33,21 +33,21 @@ const MyPost = ({ title, discription, rate }) => {
         }
         {title == "Sonia Brown" &&
           < FastImage
-            style={{ height: "100%", width: "100%", }}
+            style={{ height: "90%", width: "90%", }}
             source={require("../assets/Bitmapc.png")}
             resizeMode={FastImage.resizeMode.contain}
           />
         }
         {title == "Paulibne Fisher" &&
           < FastImage
-            style={{ height: "100%", width: "100%", }}
+            style={{ height: "90%", width: "90%", }}
             source={require("../assets/Bitmapd.png")}
             resizeMode={FastImage.resizeMode.contain}
           />
         }
         {title == "Leon Bennett" &&
           < FastImage
-            style={{ height: "100%", width: "100%", }}
+            style={{ height: "90%", width: "90%", }}
             source={require("../assets/Bitmapa.png")}
             resizeMode={FastImage.resizeMode.contain}
           />

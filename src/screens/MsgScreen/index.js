@@ -157,7 +157,7 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                             {Name == "Sharlene Edwards" &&
                                 < FastImage
                                     style={{ height: "100%", width: "100%", }}
-                                    source={require("../../assets/Bitmag.png")}
+                                    source={require("../../assets/Bitmapa.png")}
                                     resizeMode={FastImage.resizeMode.contain}
                                 />
                             }

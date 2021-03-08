@@ -43,9 +43,9 @@ const AboutScreen = ({ }) => {
             <View
                 onPress={() => Actions.pop()}
                 style={styles.header}>
-                <TouchableOpacity 
-                onPress={()=>Actions.pop()}
-                style={{ flex: 4 }}>
+                <TouchableOpacity
+                    onPress={() => Actions.pop()}
+                    style={{ flex: 4 }}>
                     <AntDesign
                         name={"arrowleft"}
                         size={30}
@@ -116,6 +116,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         width: "100%",
         alignItems: "center",
+        borderBottomWidth:0.5,
         paddingHorizontal: 15,
     }
 });

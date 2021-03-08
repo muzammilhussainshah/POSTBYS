@@ -87,7 +87,7 @@ const Chats = ({ Name, Message, Date }) => {
             </View>
             <View style={{ flex: 2, alignItems: "flex-end", paddingTop: 15 }}>
                 <Text
-                    style={{ fontSize: 13 }}>{Date}
+                    style={{ fontSize: 13 ,color:Colors.slideClr}}>{Date}
                 </Text>
             </View>
         </TouchableOpacity>

@@ -17,7 +17,7 @@ const About = ({ title }) => {
             style={styles.item}>
             <View style={{ flex: 1.5, justifyContent: "center", alignItems: "center" }}>
                 {title == "Rate Us" &&
-                    <View style={{ borderBottomWidth: 1 }}>
+                    <View style={{ borderBottomWidth: 1,borderBottomColor:Colors.slideClr }}>
                         <AntDesign
                             name={"edit"}
                             size={20}

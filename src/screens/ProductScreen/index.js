@@ -104,7 +104,7 @@ const ProductScreen = ({ title, discription, rate }) => {
             <View style={{ height: flex1 * 2 }}>
                 < FastImage
                     style={{ height: "100%", width: "100%", }}
-                    source={require("../../assets/Bitmag.png")}
+                    source={require("../../assets/Bitmapa.png")}
                     resizeMode={FastImage.resizeMode.contain}
                 />
             </View>

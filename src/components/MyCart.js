@@ -69,18 +69,29 @@ const MyCart = ({ Name, discription }) => {
                 </View>
             </View>
             <View style={{ flex: 6.3, paddingVertical: 5, justifyContent: "space-evenly" }}>
-                <Text >{Name}
-                </Text>
-                <Text
-                    style={{ fontSize: 12, color: Colors.slideClr }}>{discription}
-                </Text>
-                <TouchableOpacity
-                    onPress={() => routChange("MsgScreen")}
-                    style={styles.MsgBtn}>
-                    <Text
-                        style={{ color: Colors.white }}>Message
+                <View style={{ flex: 2.5,  }}>
+
+                    <Text >{Name}
                     </Text>
-                </TouchableOpacity>
+                </View>
+                <View style={{ flex: 4.5,  }}>
+
+
+                    <Text
+                        style={{ fontSize: 12, color: Colors.slideClr }}>{discription}
+                    </Text>
+                </View>
+                <View style={{ flex:4, justifyContent:"flex-end" }}>
+
+
+                    <TouchableOpacity
+                        onPress={() => routChange("MsgScreen")}
+                        style={styles.MsgBtn}>
+                        <Text
+                            style={{ color: Colors.white }}>Message
+                    </Text>
+                    </TouchableOpacity>
+                </View>
             </View>
             <View style={styles.CheckMark}>
                 <TouchableOpacity
@@ -117,7 +128,7 @@ const styles = StyleSheet.create({
         marginRight: 10,
         justifyContent: "center",
         alignItems: "center",
-        borderColor:Colors.slideClr,
+        borderColor: Colors.slideClr,
         borderWidth: 1,
         borderRadius: 10
     },

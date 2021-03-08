@@ -127,7 +127,8 @@ const DATAFOMYPOST = [
 
     },
 ];
-const windowHeight = Dimensions.get('window').height;
+const windowHeight = Dimensions.get('window').height - 24;
+const flex1 = windowHeight / 10;
 const MyProfileScreen = ({ }) => {
     const [activeColor, setActiveColor] = useState("Paid Money");
     const [value, onChangeText] = useState(true)
@@ -145,7 +146,7 @@ const MyProfileScreen = ({ }) => {
     return (
         <ScrollView style={{ height: windowHeight }}>
             <View style={{ flex: 2 }}>
-                <View style={{ height: 140 }}>
+                <View style={{ height: flex1*2.5  }}>
                     <View
                         onPress={() => Actions.pop()}
                         style={styles.header}>
@@ -202,7 +203,7 @@ const MyProfileScreen = ({ }) => {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <View style={{ flex: 7.5, }}>
+                <View style={{ height: flex1*7.5 }}>
                     <Tabs
                         onChangeTab={(key) => activeColorChange(key)}
                         locked={true} >
