@@ -75,7 +75,9 @@ const BagScreen = ({ }) => {
             </Text>
           </TouchableOpacity>
         </View>
-        <View style={{ flex: 8.6 }}>
+        <View style={{
+          flex: 8.6
+        }}>
           <FlatList
             data={arrayData}
             renderItem={renderItem}

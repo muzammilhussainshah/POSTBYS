@@ -5,25 +5,24 @@ import {
     View,
     Text,
     TouchableOpacity,
-    StyleSheet, 
+    StyleSheet,
 } from 'react-native';
-const TransactionScreen = ({ Name, Date, Rate }) => { 
+const TransactionScreen = ({ Name, Date, Rate }) => {
     return (
         <TouchableOpacity
-            onPress={() => routChange("MsgScreen")}
             style={styles.item}>
             <View style={{ flex: 2, justifyContent: "center", alignItems: "center" }}>
                 <View style={styles.profilePhoto}>
                     {Rate == "$725.00" &&
                         <FastImage
-                            style={{ height: "100%", width: "100%", }}
-                            source={require("../assets/Bitmapa.png")}
+                            style={{ height: "80%", width: "80%", }}
+                            source={require("../assets/Bitmap.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
                     {Name == "Sonia Brown" &&
-                        <FastImage
-                            style={{ height: "100%", width: "100%", }}
+                        < FastImage
+                            style={{ height: "90%", width: "90%", }}
                             source={require("../assets/Bitmapc.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
@@ -45,23 +44,24 @@ const TransactionScreen = ({ Name, Date, Rate }) => {
                     }
                     {Rate == "$50.50" &&
                         <FastImage
-                            style={{ height: "100%", width: "100%", }}
-                            source={require("../assets/Bitmag.png")}
+                            style={{ height: "80%", width: "80%", }}
+                            source={require("../assets/Bitmapa.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
                     {Rate == "$575.50" &&
                         <FastImage
                             style={{ height: "100%", width: "100%", }}
-                            source={require("../assets/Bitmapa.png")}
+                            source={require("../assets/Bitmapb.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
                     {Rate == "$740.00" &&
                         <FastImage
                             style={{ height: "100%", width: "100%", }}
-                            source={require("../assets/Bitmapa.png")}
+                            source={require("../assets/Bitmapb.png")}
                             resizeMode={FastImage.resizeMode.contain}
+                       
                         />
                     }
                     {Rate == "$430.00" &&
@@ -73,8 +73,8 @@ const TransactionScreen = ({ Name, Date, Rate }) => {
                     }
                     {Rate == "$140.50" &&
                         <FastImage
-                            style={{ height: "100%", width: "100%", }}
-                            source={require("../assets/Bitmag.png")}
+                            style={{ height: "80%", width: "80%", }}
+                            source={require("../assets/Bitmapa.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
@@ -106,10 +106,10 @@ const styles = StyleSheet.create({
         borderColor: Colors.gray,
         flexDirection: "row",
     },
-    Settings: { 
+    Settings: {
         alignItems: "center",
         flexDirection: "row",
-        backgroundColor: "blue", 
+        backgroundColor: "blue",
     },
     switchBtn: {
         borderColor: Colors.shade,
@@ -120,9 +120,13 @@ const styles = StyleSheet.create({
         borderRadius: 20
     },
     profilePhoto: {
-        width: "80%",
+        width: "60%",
+        alignItems: "center",
+        borderWidth: 1,
+        justifyContent: "center",
         height: "80%",
-        borderRadius: 80,
+        borderColor: Colors.slideClr,
+        borderRadius: 5,
         overflow: "hidden"
     }
 });

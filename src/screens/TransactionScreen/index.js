@@ -40,7 +40,7 @@ const DATA = [
     },
     {
         id: '58694a0f-3da1-471f-bd96-145571e29d72',
-        Rate: "$500.50",
+        Rate: "$500.51",
         Date: "29 july 2020",
         Name: "Sonia Brown",
     },
@@ -114,9 +114,8 @@ const TransactionScreen = ({ }) => {
                 </TouchableOpacity>
             </View>
 
-            <View style={{ flex: 9, paddingHorizontal: 15 }}>
+            <View style={{ flex: 9, }}>
                 <Tabs
-
                     onChangeTab={(key) => activeColorChange(key)}
                     locked={true} >
                     <Tab

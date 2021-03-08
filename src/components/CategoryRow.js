@@ -15,45 +15,45 @@ const CategoryRow = ({ title, discription, rate }) => {
   return (
     <TouchableOpacity
       style={styles.item}>
-      <View style={{ flex: 3.5, }}>
+      <View style={{ flex: 3.5,alignItems:"center",paddingTop:5 }}>
         {title == "Sharlene Edwards" &&
           < FastImage
-            style={{ height: "100%", width: "100%", }}
-            source={require("../assets/Bitmag.png")}
-            resizeMode={FastImage.resizeMode.contain}
-          />
-        }
-        {title == "Ronnie Pierce" &&
-          < FastImage
-            style={{ height: "100%", width: "100%", }}
-            source={require("../assets/Bitmapb.png")}
-            resizeMode={FastImage.resizeMode.contain}
-          />
-        }
-        {title == "Sonia Brown" &&
-          < FastImage
-            style={{ height: "100%", width: "100%", }}
-            source={require("../assets/Bitmapc.png")}
-            resizeMode={FastImage.resizeMode.contain}
-          />
-        }
-        {title == "Paulibne Fisher" &&
-          < FastImage
-            style={{ height: "100%", width: "100%", }}
-            source={require("../assets/Bitmapd.png")}
-            resizeMode={FastImage.resizeMode.contain}
-          />
-        }
-        {title == "Leon Bennett" &&
-          < FastImage
-            style={{ height: "100%", width: "100%", }}
+            style={{ height: "95%", width: "95%", }}
             source={require("../assets/Bitmapa.png")}
             resizeMode={FastImage.resizeMode.contain}
           />
         }
         {title == "Ronnie Pierce" &&
           < FastImage
-            style={{ height: "100%", width: "100%", }}
+            style={{ height: "95%", width: "95%", }}
+            source={require("../assets/Bitmapb.png")}
+            resizeMode={FastImage.resizeMode.contain}
+          />
+        }
+        {title == "Sonia Brown" &&
+          < FastImage
+            style={{ height: "95%", width: "95%", }}
+            source={require("../assets/Bitmapc.png")}
+            resizeMode={FastImage.resizeMode.contain}
+          />
+        }
+        {title == "Paulibne Fisher" &&
+          < FastImage
+            style={{ height: "95%", width: "95%", }}
+            source={require("../assets/Bitmapd.png")}
+            resizeMode={FastImage.resizeMode.contain}
+          />
+        }
+        {title == "Leon Bennett" &&
+          < FastImage
+            style={{ height: "95%", width: "95%", }}
+            source={require("../assets/Bitmapa.png")}
+            resizeMode={FastImage.resizeMode.contain}
+          />
+        }
+        {title == "Ronnie Pierce" &&
+          < FastImage
+            style={{ height: "95%", width: "95%", }}
             source={require("../assets/Bitmap.png")}
             resizeMode={FastImage.resizeMode.contain}
           />

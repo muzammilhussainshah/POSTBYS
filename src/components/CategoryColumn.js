@@ -10,17 +10,17 @@ const CategoryColumn = ({ title, discription, rate }) => (
     style={styles.item2}>
     <View style={{ flex: 4, flexDirection: "row" }}>
       {title == "Sharlene Edwards" &&
-        <View style={{ flex: 7, alignItems: "flex-end" }}>
+        <View style={{ flex: 7, alignItems: "flex-end",justifyContent:"center" }}>
 
           < FastImage
-            style={{ height: "100%", width: 85, }}
-            source={require("../assets/Bitmag.png")}
+            style={{ height: "90%", width: 85, }}
+            source={require("../assets/Bitmapa.png")}
             resizeMode={FastImage.resizeMode.contain}
           />
         </View>
       }
       {title == "Ronnie Pierce" &&
-        <View style={{ flex: 7, alignItems: "flex-end" }}>
+        <View style={{ flex: 7, alignItems: "flex-end",justifyContent:"center" }}>
 
           < FastImage
             style={{ height: "100%", width: 85, }}
@@ -30,7 +30,7 @@ const CategoryColumn = ({ title, discription, rate }) => (
         </View>
       }
       {title == "Sonia Brown" &&
-        <View style={{ flex: 7, alignItems: "flex-end" }}>
+        <View style={{ flex: 7, alignItems: "flex-end",justifyContent:"center" }}>
 
           < FastImage
             style={{ height: "100%", width: 85, }}
@@ -40,7 +40,7 @@ const CategoryColumn = ({ title, discription, rate }) => (
         </View>
       }
       {title == "Paulibne Fisher" &&
-        <View style={{ flex: 7, alignItems: "flex-end" }}>
+        <View style={{ flex: 7, alignItems: "flex-end",justifyContent:"center" }}>
 
           < FastImage
             style={{ height: "100%", width: 85, }}
@@ -50,10 +50,10 @@ const CategoryColumn = ({ title, discription, rate }) => (
         </View>
       }
       {title == "Leon Bennett" &&
-        <View style={{ flex: 7, alignItems: "flex-end" }}>
+        <View style={{ flex: 7, alignItems: "flex-end",justifyContent:"center" }}>
 
           < FastImage
-            style={{ height: "100%", width: 85, }}
+            style={{ height: "90%", width: 85, }}
             source={require("../assets/Bitmapa.png")}
             resizeMode={FastImage.resizeMode.contain}
           />

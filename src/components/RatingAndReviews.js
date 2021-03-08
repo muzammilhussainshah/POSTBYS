@@ -22,7 +22,7 @@ const RatingAndReviews = ({
                 <View style={styles.DateView} >
                     <View style={styles.profilePhoto}>
                         < FastImage
-                            style={{ height: 30, width: 30, }}
+                            style={{ height: 25, width: 25, }}
                             source={require("../assets/Imagea.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />

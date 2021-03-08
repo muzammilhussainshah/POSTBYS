@@ -102,7 +102,10 @@ const ChatScreen = () => {
           <View style={{ flex: 7.2 }}>
             <FlatList
               data={DATA}
-              renderItem={({item}) => <Chats Name={item.Name} Message={item.Message} Date={item.Date} />}
+              renderItem={({ item }) => <Chats
+                Name={item.Name}
+                Message={item.Message}
+                Date={item.Date} />}
               keyExtractor={item => item.id}
             />
           </View>

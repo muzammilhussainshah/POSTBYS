@@ -19,49 +19,49 @@ const MyCart = ({ Name, discription }) => {
                 <View style={styles.CartImg}>
                     {Name == "Ronnie Pierce" &&
                         < FastImage
-                            style={{ height: 100, width: 100, }}
+                            style={{ height: "100%", width: "100%", }}
                             source={require("../assets/Bitmapb.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
                     {Name == "Leon Bennett" &&
                         < FastImage
-                            style={{ height: 100, width: 100, }}
+                            style={{ height: "80%", width: "80%", }}
                             source={require("../assets/Bitmapa.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
                     {Name == "Sonia Brown" &&
                         < FastImage
-                            style={{ height: 100, width: 100, }}
+                            style={{ height: "90%", width: "90%", }}
                             source={require("../assets/Bitmapc.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
                     {Name == "Pauline Fisher" &&
                         < FastImage
-                            style={{ height: 100, width: 100, }}
+                            style={{ height: "100%", width: "100%", }}
                             source={require("../assets/Bitmapd.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
                     {Name == "Sharlene Edwards" &&
                         < FastImage
-                            style={{ height: 100, width: 100, }}
-                            source={require("../assets/Bitmag.png")}
+                            style={{ height: "85%", width: "85%", }}
+                            source={require("../assets/Bitmapa.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
                     {Name == "International apparela" &&
                         < FastImage
-                            style={{ height: 100, width: 100, }}
+                            style={{ height: "100%", width: "100%", }}
                             source={require("../assets/Bitmapb.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }
                     {Name == "International apparel" &&
                         < FastImage
-                            style={{ height: 100, width: 100, }}
+                            style={{ height: "90%", width: "90%", }}
                             source={require("../assets/Bitmapc.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
@@ -102,20 +102,24 @@ const MyCart = ({ Name, discription }) => {
 }
 const styles = StyleSheet.create({
     item: {
+
         height: 120,
         flexDirection: "row",
         borderBottomWidth: 1,
         borderRadius: 3,
         borderColor: Colors.slideClr,
         flexDirection: "row",
+
     },
     CartImg: {
         height: "85%",
         width: '80%',
         marginRight: 10,
-        borderRadius: 10,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        borderColor:Colors.slideClr,
+        borderWidth: 1,
+        borderRadius: 10
     },
     MsgBtn: {
         height: 35,

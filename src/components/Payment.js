@@ -43,7 +43,7 @@ const Payment = ({ title, discription, number }) => {
                     />
                 }
             </View>
-            <View style={{ flex: 4.5, justifyContent: "center", }}>
+            <View style={{ flex: 6.5, justifyContent: "center" }}>
                 <Text
                     style={{ fontSize: 15 }}>{title}
                 </Text>
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
         width: 20
     },
     Settings: {
-        flex: 5,
+        flex: 2,
         alignItems: "center",
         flexDirection: "row",
         justifyContent: "flex-end",

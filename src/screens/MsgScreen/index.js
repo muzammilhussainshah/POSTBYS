@@ -1,5 +1,6 @@
 import Colors from "../../common/Colors";
 import FastImage from "react-native-fast-image";
+import DocumentPicker from 'react-native-document-picker';
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Entypo from "react-native-vector-icons/Entypo";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
@@ -21,7 +22,22 @@ const height = Dimensions.get('window').height - 23;
 const MsgScreen = ({ Name, Message, Date, discription }) => {
     console.log(height)
     const [message, setMessage] = useState('');
+    const [imageUri, setImageUri] = useState("");
     const [messages, setMessages] = useState([]);
+    const getDocument = async (stName) => {
+        try {
+            const res = await DocumentPicker.pick({
+                type: [DocumentPicker.types.images],
+            });
+            setImageUri(res.uri)
+        } catch (err) {
+            if (DocumentPicker.isCancel(err)) {
+                // User cancelled the picker, exit any dialogs or menus and move on
+            } else {
+                throw err;
+            }
+        }
+    }
     return (
         < ScrollView style={{}}>
             <View style={[styles.activeStatus, { justifyContent: "center", height: discription ? height / 6 : height / 11.5 }]}>
@@ -172,7 +188,7 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                 }
             </View>
             <ScrollView style={[styles.Chats, {
-                height: discription ? height / 1.35 : height / 1.22 
+                height: discription ? height / 1.35 : height / 1.22
             }]}>
                 <View style={styles.Timing}>
                     {Date ?
@@ -192,13 +208,10 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                                     Does anuone carry salt-and papper diamond parceis if 1ct + per stone? Message me with your offers and prices.,
                                 </Text>
                             }
-
                         </View>
                     </View>
-
                 </View>
                 <View style={styles.Msg2}>
-
                     <View style={{ paddingBottom: 5, }}>
                         <View style={styles.msgTextView}>
                             {discription ?
@@ -206,7 +219,6 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                                 <Text style={styles.msg2Text}>
                                     Does anuone carry salt-and papper diamond parceis if 1ct + per stone? Message me with your offers and prices.,
                                 </Text>
-
                             }
                         </View>
                     </View>
@@ -223,7 +235,6 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                                     Does anuone carry salt-and papper diamond parceis if 1ct + per stone? Message me with your offers and prices.,
                                 </Text>
                             }
-
                         </View>
                     </View>
 
@@ -234,11 +245,11 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                         <View
                             key={name + index}
                             style={styles.Msg3}>
-                            <View style={{ paddingHorizontal: 5, paddingBottom: 5, alignItems: "flex-end" }}>
+                            <View style={{ paddingHorizontal: 5,   paddingBottom: 5, alignItems: "flex-end" }}>
                                 <View style={styles.msg2TextView}>
-                                    <Text style={styles.msg2Texta}>
-                                        {name}
-                                    </Text>
+                                        <Text style={styles.msg2Texta}>
+                                            {name}
+                                        </Text>  
                                 </View>
                             </View>
 
@@ -247,7 +258,9 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                 })}
             </ScrollView>
             <View style={styles.footer}>
-                <TouchableOpacity style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+                <TouchableOpacity
+                    onPress={() => getDocument("image1Uri")}
+                    style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
                     <AntDesign
                         name="pluscircle"
                         style={{ fontSize: 23 }} />
@@ -262,11 +275,11 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                 </View>
                 <TouchableOpacity
                     onPress={() => {
-                        if (message == "") {
+                        if (message == "" && imageUri == "") {
                             alert("message box is empty")
                         } else {
                             let messageClone = messages;
-                            messageClone.push(message);
+                             messageClone.push(message);
                             setMessages(messageClone);
                             setMessage("")
                         }
