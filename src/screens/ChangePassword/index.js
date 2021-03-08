@@ -110,7 +110,7 @@ const ChangePassword = ({ }) => {
                     </View>
                     <View style={{ marginTop: "25%" }}>
                         <LoginBtn
-                            _func={() => Actions.NewPassScreen()}
+                            _func={() => Actions.Home()}
                             name={"Save"}
                             backgroundColor={Colors.black}
                             textColor={Colors.white}

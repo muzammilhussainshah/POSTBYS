@@ -22,11 +22,12 @@ const Setting = ({ title }) => {
         <TouchableOpacity
             onPress={() => {
                 { title == "Transactions" && Actions.TransactionScreen() }
-                { title == "About" && Actions.AboutScreen()   }
-                { title == "Support" && Actions.SupportScreen()   }
-                { title == "Location" && Actions.LocationScreen()   }
-                { title == "Payment" && Actions.PaymentmethodScreen()   }
-                { title == "Password" && Actions.ChangePassword()   }
+                { title == "About" && Actions.AboutScreen() }
+                { title == "Support" && Actions.SupportScreen() }
+                { title == "Location" && Actions.LocationScreen() }
+                { title == "Payment" && Actions.PaymentmethodScreen() }
+                { title == "Password" && Actions.ChangePassword() }
+                { title == "Sign Out" && Actions.LoginScreen() }
             }}
             activeOpacity={0.8}
             style={styles.item}>
