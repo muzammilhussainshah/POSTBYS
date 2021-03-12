@@ -16,7 +16,7 @@ const TransactionScreen = ({ Name, Date, Rate }) => {
                     {Rate == "$725.00" &&
                         <FastImage
                             style={{ height: "80%", width: "80%", }}
-                            source={require("../assets/Bitmap.png")}
+                            source={require("../assets/Bitmapz.png")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                     }

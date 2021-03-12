@@ -114,7 +114,7 @@ const DATAFOMYPOST = [
     },
     {
         id: '58694a0f-3da1-471f-bd96-145571e29d72',
-        title: 'Paulibne Fisher',
+        title: 'Pauline Fisher',
         rate: "4.9",
         discription: 'Please message me if you carry calibrated blue sappire 3mm round gemstones, need 20 carats .No more than $200/ct quality',
 

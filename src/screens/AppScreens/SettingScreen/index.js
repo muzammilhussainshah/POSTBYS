@@ -56,7 +56,7 @@ const SettingScreen = () => {
       <View style={{ flex: 7.8, width: "100%", }}>
         <View style={styles.header}>
           <TouchableOpacity
-            onPress={() => Actions.MyProfileScreen()}
+            // onPress={() => Actions.MyProfileScreen()}
             activeOpacity={0.8}
             style={{ flex: 2.2, justifyContent: "center", alignItems: "center" }}>
             <View style={styles.profilePhoto}>
@@ -68,11 +68,11 @@ const SettingScreen = () => {
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => Actions.MyProfileScreen()}
+            // onPress={() => Actions.MyProfileScreen()}
             activeOpacity={0.8}
             style={{ flex: 5.8, justifyContent: "center", }}>
             <Text
-              style={{ fontSize: 20 }}>Linda jhonston
+              style={{ fontSize: 20 }}>Linda Jhonston
             </Text>
             <Text
               style={{ fontSize: 13, color: Colors.slideClr }}>Show Profile

@@ -19,7 +19,7 @@ const MyPost = ({ title, discription, rate }) => {
       <View style={{ flex: 3.5,justifyContent:"center",alignItems:"center" }}>
         {title == "Sharlene Edwards" &&
           < FastImage
-            style={{ height: "90%", width: "90%", }}
+            style={{ height: "80%", width: "80%", }}
             source={require("../assets/Bitmapa.png")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -38,7 +38,7 @@ const MyPost = ({ title, discription, rate }) => {
             resizeMode={FastImage.resizeMode.contain}
           />
         }
-        {title == "Paulibne Fisher" &&
+        {title == "Pauline Fisher" &&
           < FastImage
             style={{ height: "90%", width: "90%", }}
             source={require("../assets/Bitmapd.png")}
@@ -47,7 +47,7 @@ const MyPost = ({ title, discription, rate }) => {
         }
         {title == "Leon Bennett" &&
           < FastImage
-            style={{ height: "90%", width: "90%", }}
+            style={{ height: "80%", width: "80%", }}
             source={require("../assets/Bitmapa.png")}
             resizeMode={FastImage.resizeMode.contain}
           />

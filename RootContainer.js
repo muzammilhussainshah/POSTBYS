@@ -7,17 +7,17 @@ import { View, Text, StyleSheet, } from 'react-native';
 const RootContainer = () => {
   const [Splash, setSplash] = useState(true);
 
-  useEffect(() => {
-    console.disableYellowBox = true
-    setTimeout(() => {
-      setSplash(false)
-    },3000);
-  }, [])
+  // useEffect(() => {
+  //   console.disableYellowBox = true
+  //   setTimeout(() => {
+  //     setSplash(false)
+  //   },3000);
+  // }, [])
 
   return (
-    Splash ?
-      <SplashScreen /> 
-      :
+    // Splash ?
+    //   <SplashScreen /> 
+    //   :
       <StackNavigation />
   )
 };

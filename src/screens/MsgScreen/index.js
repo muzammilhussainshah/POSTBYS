@@ -196,29 +196,13 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                         <Text>Today</Text>
                     }
                 </View>
-                <View
-                    style={styles.Msg3}>
-                    <View style={{ alignItems: "flex-end", marginVertical: 10, width: "100%" }}>
-                        <View style={styles.msg2TextView}>
-                            {discription ?
-                                <Text style={styles.msg2Texta}>
-                                    {discription}
-                                </Text> :
-                                <Text style={styles.msg2Texta}>
-                                    Does anuone carry salt-and papper diamond parceis if 1ct + per stone? Message me with your offers and prices.,
-                                </Text>
-                            }
-                        </View>
-                    </View>
-                </View>
                 <View style={styles.Msg2}>
                     <View style={{ paddingBottom: 5, }}>
                         <View style={styles.msgTextView}>
                             {discription ?
                                 <Text style={styles.msg2Text}>{discription}</Text> :
                                 <Text style={styles.msg2Text}>
-                                    Does anuone carry salt-and papper diamond parceis if 1ct + per stone? Message me with your offers and prices.,
-                                </Text>
+                                    Hello, I have a similar looking 18k Gold butterfly necklace that might interest you .Please see the attached image.Let me know what you think" "image of the butterfly necklace "(I attached it to this email)</Text>
                             }
                         </View>
                     </View>
@@ -232,7 +216,22 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                                     {discription}
                                 </Text> :
                                 <Text style={styles.msg2Texta}>
-                                    Does anuone carry salt-and papper diamond parceis if 1ct + per stone? Message me with your offers and prices.,
+                                    "Hello! Yes, that is what I am looking for! How much is it and what is your booth number?"
+                           </Text>
+                            }
+                        </View>
+                    </View>
+                </View>
+                <View
+                    style={styles.Msg3}>
+                    <View style={{ alignItems: "flex-end", marginVertical: 10, width: "100%" }}>
+                        <View style={styles.msg2TextView}>
+                            {discription ?
+                                <Text style={styles.msg2Texta}>
+                                    {discription}
+                                </Text> :
+                                <Text style={styles.msg2Texta}>
+                                    "Also, please  let me know the size of the necklace.
                                 </Text>
                             }
                         </View>
@@ -245,11 +244,11 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                         <View
                             key={name + index}
                             style={styles.Msg3}>
-                            <View style={{ paddingHorizontal: 5,   paddingBottom: 5, alignItems: "flex-end" }}>
+                            <View style={{ paddingHorizontal: 5, paddingBottom: 5, alignItems: "flex-end" }}>
                                 <View style={styles.msg2TextView}>
-                                        <Text style={styles.msg2Texta}>
-                                            {name}
-                                        </Text>  
+                                    <Text style={styles.msg2Texta}>
+                                        {name}
+                                    </Text>
                                 </View>
                             </View>
 
@@ -279,7 +278,7 @@ const MsgScreen = ({ Name, Message, Date, discription }) => {
                             alert("message box is empty")
                         } else {
                             let messageClone = messages;
-                             messageClone.push(message);
+                            messageClone.push(message);
                             setMessages(messageClone);
                             setMessage("")
                         }

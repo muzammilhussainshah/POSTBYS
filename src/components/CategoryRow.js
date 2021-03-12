@@ -19,7 +19,7 @@ const CategoryRow = ({ title, discription, rate }) => {
       <View style={{ flex: 3.5, alignItems: "center", paddingTop: 5 }}>
         {title == "Sharlene Edwards" &&
           < FastImage
-            style={{ height: "95%", width: "95%", }}
+            style={{ height: "85%", width: "85%", }}
             source={require("../assets/Bitmapa.png")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -47,7 +47,7 @@ const CategoryRow = ({ title, discription, rate }) => {
         }
         {title == "Leon Bennett" &&
           < FastImage
-            style={{ height: "95%", width: "95%", }}
+            style={{ height: "85%", width: "85%", }}
             source={require("../assets/Bitmapa.png")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -55,7 +55,7 @@ const CategoryRow = ({ title, discription, rate }) => {
         {title == "Ronnie Pierce" &&
           < FastImage
             style={{ height: "95%", width: "95%", }}
-            source={require("../assets/Bitmap.png")}
+            source={require("../assets/Bitmapz.png")}
             resizeMode={FastImage.resizeMode.contain}
           />
         }

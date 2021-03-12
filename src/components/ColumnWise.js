@@ -46,8 +46,8 @@ const ColumnWise = ({ title, title2 }) => (
       }
       {title == "International apparela" &&
         < FastImage
-          style={{ height: 170, width: 170, }}
-          source={require("../assets/Bitmap.png")}
+          style={{ height: 110, width: 110, }}
+          source={require("../assets/Bitmapz.png")}
           resizeMode={FastImage.resizeMode.contain}
         />
       }

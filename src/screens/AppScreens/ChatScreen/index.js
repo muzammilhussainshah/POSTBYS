@@ -27,13 +27,7 @@ const DATA = [
     Date: "15.11.2020",
     Message: "Meet me by the front entrance and we'll discuss.",
     Name: 'Ronnie Pierce',
-  },
-  {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    Date: "14.11.2020",
-    Message: "Rose gold color is available?",
-    Name: 'Brianna Black',
-  },
+  }, 
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
     Date: "12.11.2020",

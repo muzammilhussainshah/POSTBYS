@@ -15,7 +15,7 @@ const CategoryColumn = ({ title, discription, rate }) => {
       style={styles.item2}>
       <View style={{ flex: 4, flexDirection: "row" }}>
         {title == "Sharlene Edwards" &&
-          <View style={{ flex: 7, alignItems: "flex-end", justifyContent: "center" }}>
+          <View style={{ flex: 7,backgroundColor:"red", alignItems: "flex-end", justifyContent: "center" }}>
 
             < FastImage
               style={{ height: "90%", width: 85, }}

@@ -68,7 +68,7 @@ const BagScreen = ({ }) => {
     >
       <View style={{ flex: 10 }}>
         <View style={styles.header}>
-          <Text style={{ fontSize: 22 }}>My Cart</Text>
+          <Text style={{ fontSize: 22 }}>InterGem Jewelry Show 2021</Text>
           <TouchableOpacity>
             <Text
               style={{ fontSize: 16, color: Colors.slideClr }}>Edit

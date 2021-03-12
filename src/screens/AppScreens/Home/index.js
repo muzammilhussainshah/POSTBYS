@@ -122,7 +122,7 @@ const Home = () => {
             </View>
           </View>
           <View style={styles.tradeshows}>
-            <Text style={{ fontSize: 20 }}>Tradeshows</Text>
+            <Text style={{ fontSize: 20 }}>InterGem Jewelry Show 2021</Text>
             <TouchableOpacity>
               <Entypo
                 name={"flow-parallel"}

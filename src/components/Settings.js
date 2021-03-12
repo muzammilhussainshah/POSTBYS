@@ -22,12 +22,12 @@ const Setting = ({ title }) => {
         <TouchableOpacity
             onPress={() => {
                 { title == "Transactions" && Actions.TransactionScreen() }
-                { title == "About" && Actions.AboutScreen() }
-                { title == "Support" && Actions.SupportScreen() }
-                { title == "Location" && Actions.LocationScreen() }
+                // { title == "About" && Actions.AboutScreen() }
+                // { title == "Support" && Actions.SupportScreen() }
+                // { title == "Location" && Actions.LocationScreen() }
                 { title == "Payment" && Actions.PaymentmethodScreen() }
-                { title == "Password" && Actions.ChangePassword() }
-                { title == "Sign Out" && Actions.LoginScreen() }
+                // { title == "Password" && Actions.ChangePassword() }
+                // { title == "Sign Out" && Actions.LoginScreen() }
             }}
             activeOpacity={0.8}
             style={styles.item}>
@@ -77,6 +77,7 @@ const Setting = ({ title }) => {
                 {title == "About" &&
                     <FastImage
                         style={{ height: 20, width: 20, }}
+                        tintColor={Colors.black}
                         source={require("../assets/Group.png")}
                         resizeMode={FastImage.resizeMode.contain}
                     />
@@ -99,11 +100,11 @@ const Setting = ({ title }) => {
                     <View style={{ flexDirection: "row" }}>
                         <FastImage
                             style={{ height: 20, width: 20, }}
-                            source={require("../assets/flag.png")}
+                            source={require("../assets/washington.jpg")}
                             resizeMode={FastImage.resizeMode.contain}
                         />
                         <Text
-                            style={{ marginLeft: 10, color: Colors.slideClr }}>Pakistan,Asia
+                            style={{ marginLeft: 10, color: Colors.slideClr }}>Washington, D.C. USA
                         </Text>
                     </View>
                 }

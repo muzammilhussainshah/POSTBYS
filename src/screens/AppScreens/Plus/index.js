@@ -129,11 +129,11 @@ const Plus = () => {
           />
         </View>
         <View style={{ flex: 3, justifyContent: "space-evenly" }}>
-          <Text>Discription</Text>
+          <Text>Description</Text>
           <TextInput
             multiline={true}
             numberOfLines={10}
-            placeholder={"Write a detailed discription..."}
+            placeholder={"Write a detailed description..."}
             style={styles.textArea} />
         </View>
         <View style={{ flex: 3 }}>
@@ -143,12 +143,14 @@ const Plus = () => {
               <Tags
                 initialText="Type new tag"
                 textInputProps={{
-                  placeholder: "Any type of animal"
+                  placeholder: "Put any tags here"
                 }}
                 onChangeTags={tags => console.log(tags)}
                 onTagPress={(index, tagLabel, event, deleted) =>
                   console.log(index, tagLabel, event, deleted ? "deleted" : "not deleted")
                 }
+                createTagOnReturn
+                createTagOnString={["_"]}
                 containerStyle={{ marginTop: 10, borderWidth: 0.5, paddingVertical: 5 }}
                 inputStyle={{ backgroundColor: "white" }}
                 renderTag={({ tag, index, onPress, deleteTagOnPress, readonly }) => (
